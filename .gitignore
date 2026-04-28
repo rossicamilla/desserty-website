@@ -1,0 +1,19 @@
+# Credenziali — mai committare
+project/prototype/config.php
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Upload utente (file binari pesanti)
+project/uploads/
+
+# Log
+*.log

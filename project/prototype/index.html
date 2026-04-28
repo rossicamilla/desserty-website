@@ -1,0 +1,969 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Desserty — Frozen dessert per tutti i gusti</title>
+<meta name="description" content="Desserty porta in Italia le innovazioni dei dessert del mondo: Dubai Chocolate mochi e OOH! frutta gelata al cioccolato. Frozen dessert premium per supermercati e gelaterie italiane.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.desserty.it/">
+<link rel="alternate" hreflang="it" href="https://www.desserty.it/">
+<link rel="alternate" hreflang="en" href="https://www.desserty.it/en/">
+<link rel="alternate" hreflang="x-default" href="https://www.desserty.it/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Desserty">
+<meta property="og:title" content="Desserty — Frozen dessert per tutti i gusti">
+<meta property="og:description" content="Dubai Chocolate mochi e OOH! frutta gelata al cioccolato. Frozen dessert premium per supermercati e gelaterie italiane.">
+<meta property="og:url" content="https://www.desserty.it/">
+<meta property="og:image" content="https://www.desserty.it/assets/og-desserty.jpg">
+<meta property="og:locale" content="it_IT">
+<meta property="og:locale:alternate" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Desserty — Frozen dessert per tutti i gusti">
+<meta name="twitter:description" content="Dubai Chocolate mochi e OOH! frutta gelata al cioccolato. Frozen dessert premium made in Italy.">
+<meta name="twitter:image" content="https://www.desserty.it/assets/og-desserty.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.desserty.it/#org","name":"Desserty","legalName":"Confluencia Srl","url":"https://www.desserty.it","address":{"@type":"PostalAddress","streetAddress":"Via Magenta 25","addressLocality":"Seregno","addressRegion":"MB","postalCode":"20831","addressCountry":"IT"},"telephone":"+390362182119","email":"info@dessertyfood.com","sameAs":["http://www.oohfruit.com"]},{"@type":"WebSite","@id":"https://www.desserty.it/#website","url":"https://www.desserty.it","name":"Desserty","inLanguage":"it-IT","publisher":{"@id":"https://www.desserty.it/#org"}}]}
+</script>
+<template id="__bundler_thumbnail" data-bg-color="#EDE6CF">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect x="100" y="100" width="500" height="600" rx="20" fill="#EDE6CF"/>
+    <rect x="600" y="100" width="500" height="600" rx="20" fill="#FFED80"/>
+    <text x="350" y="430" font-family="Georgia, serif" font-style="italic" font-size="120" fill="#2A2418" text-anchor="middle">D</text>
+    <text x="850" y="450" font-family="Impact, sans-serif" font-style="italic" font-size="140" fill="#FF2D78" text-anchor="middle" font-weight="900">OOH!</text>
+    <circle cx="350" cy="540" r="14" fill="#F97C46"/>
+    <circle cx="850" cy="540" r="14" fill="#FF2D78"/>
+  </svg>
+</template>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=DM+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* Dubai palette */
+    --cream:#EDE6CF;
+    --cream-deep:#E2D9BC;
+    --terracotta:#F97C46;
+    --pistachio:#B7BA70;
+    --ink:#2A2418;
+    --ink-soft:#4d4534;
+
+    /* OOH palette */
+    --ooh-pink:#FF2D78;
+    --ooh-slate:#93A6B0;
+    --ooh-yellow:#FFED80;
+    --ooh-lavender:#E8E4F7;
+    --ooh-ink:#161222;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#fff;color:var(--ink);-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+
+  /* ============ TOP NAV ============ */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:saturate(140%) blur(10px);
+    -webkit-backdrop-filter:saturate(140%) blur(10px);
+    border-bottom:1px solid #ececec;
+  }
+  .nav-inner{
+    max-width:1400px;margin:0 auto;
+    padding:18px 40px;
+    display:flex;align-items:center;justify-content:space-between;
+    font-family:'Inter',sans-serif;
+  }
+  .logo{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;font-weight:500;font-size:32px;
+    letter-spacing:-0.5px;
+  }
+  .logo b{font-style:normal;font-weight:600}
+  .nav-links{display:flex;gap:36px;font-size:14px;letter-spacing:.04em;text-transform:uppercase}
+  .nav-links a{position:relative;padding:6px 0}
+  .nav-links a:hover::after{transform:scaleX(1)}
+  .nav-links a::after{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--ink);
+    transform:scaleX(0);transform-origin:left;transition:transform .35s ease;
+  }
+  .nav-cta{
+    display:flex;gap:14px;align-items:center;font-size:13px;letter-spacing:.06em;text-transform:uppercase;
+  }
+  .nav-cta .lang{opacity:.55}
+  .nav-cta .lang.active{opacity:1;font-weight:600}
+  .basket{
+    width:38px;height:38px;border:1px solid var(--ink);border-radius:50%;
+    display:grid;place-items:center;font-size:14px;
+  }
+
+  /* ============ HERO ============ */
+  .hero{
+    position:relative;
+    padding:80px 40px 0;
+    max-width:1400px;margin:0 auto;
+    text-align:center;
+  }
+  .eyebrow{
+    font-family:'Inter',sans-serif;
+    font-size:12px;letter-spacing:.4em;text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:400;
+    font-size:clamp(56px, 9vw, 132px);
+    line-height:.95;
+    letter-spacing:-0.03em;
+    margin-top:8px;
+    color:var(--ink);
+  }
+  .hero h1 em{font-style:italic;font-weight:400;color:var(--ink)}
+  .hero h1 .accent{font-style:italic;font-weight:400;color:var(--ink)}
+  .hero-sub{
+    margin:36px auto 0;max-width:680px;
+    font-family:'Inter',sans-serif;font-weight:400;
+    font-size:22px;line-height:1.5;color:var(--ink);
+  }
+
+  /* split chooser */
+  .chooser{
+    margin:64px auto 0;
+    display:grid;grid-template-columns:1fr 1fr;
+    gap:32px;
+    align-items:stretch;
+    max-width:1100px;
+  }
+  .chooser .divider{display:none}
+  .chooser-card{
+    position:relative;
+    padding:80px 40px;
+    min-height:340px;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
+    transition:background .4s ease, transform .4s ease, border-radius .6s ease;
+    cursor:pointer;
+    border:1px solid #d9d4c5;
+    background:#fff;
+    text-decoration:none;
+    overflow:hidden;
+    border-radius: 62% 38% 55% 45% / 48% 52% 48% 52%;
+  }
+  .chooser-card.dubai{
+    background:#FBF6E8;
+    border-color:#e2d9bd;
+  }
+  .chooser-card.ooh{
+    background:var(--ooh-lavender, #E8DFFC);
+    border-color:#cabfe8;
+    border-radius: 38% 62% 45% 55% / 52% 48% 52% 48%;
+  }
+  .chooser-card:hover{
+    transform:translateY(-4px);
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+  }
+  .chooser-card.dubai:hover{background:#F6EFD8}
+  .chooser-card.ooh:hover{background:#DDD0F8}
+  .chooser-card .label{
+    font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .chooser-card .name{font-size:80px;letter-spacing:-0.02em;line-height:.95;text-align:center}
+  .chooser-card.dubai .name{font-family:'Cormorant Garamond',serif;font-weight:400;font-style:italic}
+  .chooser-card.ooh .name{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;text-transform:uppercase;letter-spacing:0;color:var(--ooh-pink)}
+  .chooser-card .arrow{font-family:'Inter',sans-serif;font-size:24px;display:flex;align-items:center;gap:12px;font-weight:500}
+  .chooser-card:hover .arrow svg{transform:translateX(6px)}
+  .chooser-card .arrow svg{transition:transform .3s ease}
+
+  /* hero ornaments */
+  .ornament{position:absolute;pointer-events:none;opacity:.65}
+  .ornament.left{top:160px;left:60px;width:90px;color:var(--pistachio)}
+  .ornament.right{top:200px;right:80px;width:110px;color:var(--terracotta)}
+
+  /* ============ DUBAI SECTION ============ */
+  .dubai{
+    background:var(--cream);
+    color:var(--ink);
+    padding:140px 0 160px;
+    position:relative;
+    overflow:hidden;
+    margin-top:140px;
+    font-family:'Inter',sans-serif;
+  }
+  .dubai::before{
+    content:"";position:absolute;inset:0;
+    background-image:
+      radial-gradient(circle at 8% 12%, rgba(183,186,112,.15) 0, transparent 28%),
+      radial-gradient(circle at 92% 80%, rgba(249,124,70,.10) 0, transparent 32%);
+    pointer-events:none;
+  }
+  .dubai-wrap{max-width:1400px;margin:0 auto;padding:0 40px;position:relative;z-index:2}
+
+  .dubai-tag{
+    display:flex;align-items:center;gap:14px;
+    font-size:12px;letter-spacing:.4em;text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .dubai-tag::before{content:"";width:40px;height:1px;background:var(--ink-soft)}
+
+  .dubai-headline{
+    margin-top:32px;
+    font-family:'Cormorant Garamond',serif;
+    font-weight:300;
+    font-size:clamp(54px, 8vw, 120px);
+    line-height:.95;letter-spacing:-0.025em;
+    max-width:1100px;
+  }
+  .dubai-headline em{font-style:italic;font-weight:400;color:var(--terracotta)}
+  .dubai-headline .pist{font-style:italic;font-weight:400;color:var(--pistachio)}
+
+  .dubai-grid{
+    margin-top:90px;
+    display:grid;grid-template-columns:1.1fr 1fr;gap:80px;align-items:center;
+  }
+  .dubai-product{
+    background:#fff;
+    border-radius:6px;
+    aspect-ratio: 5 / 4;
+    display:grid;place-items:center;
+    position:relative;overflow:hidden;
+    box-shadow:0 30px 80px -40px rgba(58,46,16,.35);
+  }
+  .dubai-product img{width:58%;filter:drop-shadow(0 24px 30px rgba(0,0,0,.18))}
+  .dubai-product .badge{
+    position:absolute;top:24px;left:24px;
+    background:var(--terracotta);color:#fff;
+    width:88px;height:88px;border-radius:50%;
+    display:grid;place-items:center;text-align:center;
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;line-height:1.1;
+    transform:rotate(-12deg);
+  }
+  .dubai-product .corner-illus{
+    position:absolute;bottom:18px;right:18px;
+    color:var(--pistachio);width:90px;opacity:.55;
+  }
+
+  .dubai-copy h2{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:400;font-size:48px;line-height:1.05;letter-spacing:-0.01em;
+  }
+  .dubai-copy h2 em{color:var(--terracotta);font-weight:400}
+  .dubai-copy p{
+    margin-top:22px;
+    font-size:21px;line-height:1.55;
+    color:var(--ink);font-weight:400;
+    max-width:520px;
+  }
+    color:var(--ink-soft);
+    max-width:480px;
+  }
+  .ingredient-list{
+    margin-top:38px;display:flex;flex-direction:row;gap:12px;flex-wrap:wrap;max-width:480px;
+  }
+  .ingredient-row{
+    display:flex;flex-direction:column;gap:6px;
+    padding:18px 20px;
+    background:#fff;
+    border:1px solid rgba(42,36,24,.12);
+    border-radius:12px;
+    flex:1;min-width:120px;
+  }
+  .ingredient-row .ing{font-weight:600;font-size:14px;letter-spacing:.01em;color:var(--ink)}
+  .ingredient-row .note{color:var(--terracotta);font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:500}
+
+  /* formats row (barattolo + flowpack) */
+  .formats{
+    margin-top:120px;
+    display:grid;grid-template-columns:repeat(2,1fr);gap:32px;
+  }
+  .format-card{
+    background:#fff;border-radius:6px;
+    padding:50px 40px 38px;
+    position:relative;overflow:hidden;
+    border:1px solid rgba(42,36,24,.08);
+  }
+  .format-card .kind{
+    font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:var(--ink-soft);
+  }
+  .format-card h3{
+    margin-top:14px;
+    font-family:'Cormorant Garamond',serif;font-weight:400;font-size:38px;line-height:1.05;
+  }
+  .format-card h3 em{font-style:italic;color:var(--terracotta);font-weight:400}
+  .format-card p{
+    margin-top:14px;font-size:18px;line-height:1.55;color:var(--ink);font-weight:400;max-width:340px;
+  }
+  .format-card .visual{
+    margin-top:36px;height:240px;
+    display:grid;place-items:center;position:relative;
+  }
+  .format-card.barattolo .visual{background:linear-gradient(180deg, transparent 0%, transparent 50%, rgba(183,186,112,.18) 50%, rgba(183,186,112,.18) 100%);}
+  .format-card.barattolo .visual{height:340px}
+  .format-card.barattolo .visual img{max-height:300px;width:auto;object-fit:contain;display:block;margin:0 auto;filter:drop-shadow(0 18px 28px rgba(0,0,0,.18))}
+  .format-card.flowpack .visual{background:linear-gradient(180deg, transparent 0%, transparent 50%, rgba(183,186,112,.18) 50%, rgba(183,186,112,.18) 100%);height:340px}
+  .format-card.flowpack .visual img{max-height:300px;width:auto;object-fit:contain;display:block;margin:0 auto}
+    display:grid;place-items:center;
+    position:relative;
+    box-shadow:inset 0 0 0 1px rgba(42,36,24,.12), 0 18px 30px -10px rgba(58,46,16,.25);
+  }
+  .format-card.flowpack .flow::before,
+  .format-card.flowpack .flow::after{
+    content:"";position:absolute;top:0;bottom:0;width:36px;
+    background:rgba(42,36,24,.06);
+  }
+  .format-card.flowpack .flow::before{left:-18px;border-radius:60px 0 0 60px / 30px 0 0 30px}
+  .format-card.flowpack .flow::after{right:-18px;border-radius:0 60px 60px 0 / 0 30px 30px 0}
+  .format-card.flowpack .flow .ftxt{
+    text-align:center;
+  }
+  .format-card.flowpack .flow .ftxt .b{
+    font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:34px;color:var(--ink);
+    line-height:.95;
+  }
+  .format-card.flowpack .flow .ftxt .b strong{display:block;font-style:normal;font-weight:600;font-size:30px;letter-spacing:.02em;text-transform:uppercase;font-family:'Inter',sans-serif;color:var(--terracotta);margin-top:6px;letter-spacing:.06em}
+  .format-card .pill{
+    position:absolute;top:30px;right:30px;
+    font-size:11px;letter-spacing:.25em;text-transform:uppercase;
+    padding:8px 14px;border:1px solid var(--ink);border-radius:100px;
+  }
+
+  /* dubai story strip */
+  .story-strip{
+    margin-top:140px;
+    display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;
+    border-top:1px solid rgba(42,36,24,.18);
+    border-bottom:1px solid rgba(42,36,24,.18);
+  }
+  .story-cell{
+    padding:48px 36px;
+    border-right:1px solid rgba(42,36,24,.18);
+  }
+  .story-cell:last-child{border-right:none}
+  .story-cell .icon{color:var(--pistachio);width:48px;margin-bottom:22px}
+  .story-cell h4{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:24px;font-style:italic}
+  .story-cell p{margin-top:12px;font-size:14px;line-height:1.6;color:var(--ink-soft)}
+
+  /* ============ TRANSITION ============ */
+  .transition{
+    height:140px;
+    background:linear-gradient(180deg, var(--cream) 0%, var(--cream) 50%, var(--ooh-yellow) 50%, var(--ooh-yellow) 100%);
+    position:relative;overflow:hidden;
+  }
+  .transition .stamp{
+    position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-6deg);
+    background:var(--ooh-pink);color:#fff;
+    font-family:'Barlow Condensed',sans-serif;font-style:italic;font-weight:900;
+    font-size:42px;letter-spacing:.02em;text-transform:uppercase;
+    padding:18px 38px;border-radius:100px;
+    box-shadow:0 20px 30px -10px rgba(255,45,120,.35);
+    white-space:nowrap;
+  }
+  .transition .stamp::after{content:"!";display:inline-block;margin-left:6px;font-size:48px;line-height:1}
+
+  /* ============ OOH SECTION ============ */
+  .ooh{
+    background:var(--ooh-yellow);
+    color:var(--ooh-ink);
+    padding:80px 0 0;
+    font-family:'DM Sans',sans-serif;
+    overflow:hidden;
+    position:relative;
+  }
+  .ooh-wrap{max-width:1500px;margin:0 auto;padding:0 40px;position:relative}
+
+  /* marquee */
+  .marquee{
+    background:var(--ooh-pink);color:var(--ooh-yellow);
+    padding:18px 0;
+    overflow:hidden;
+    font-family:'Barlow Condensed',sans-serif;
+    text-transform:uppercase;
+    font-weight:800;font-style:italic;
+    font-size:32px;letter-spacing:.02em;
+    border-top:3px solid var(--ooh-ink);
+    border-bottom:3px solid var(--ooh-ink);
+    white-space:nowrap;
+  }
+  .marquee-track{display:inline-flex;gap:48px;animation:scroll 30s linear infinite;padding-left:48px}
+  .marquee span{display:inline-flex;align-items:center;gap:48px}
+  .marquee .dot{display:inline-block;width:18px;height:18px;background:var(--ooh-yellow);border-radius:50%}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(calc(-1 * var(--unit, 50%)))}}
+
+  .ooh-hero{
+    padding:80px 40px 60px;
+    max-width:1500px;margin:0 auto;
+    display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center;
+    position:relative;
+  }
+  .ooh-hero h2{
+    font-family:'Barlow Condensed',sans-serif;
+    font-weight:900;font-style:italic;
+    font-size:clamp(72px, 11vw, 180px);
+    line-height:.85;letter-spacing:-0.01em;
+    text-transform:uppercase;
+    color:var(--ooh-ink);
+  }
+  .ooh-hero h2 .pink{color:var(--ooh-pink)}
+  .ooh-hero h2 .outlined{
+    -webkit-text-stroke:3px var(--ooh-ink);
+    color:transparent;
+  }
+  .ooh-hero h2 .ooh-mark{
+    display:inline-block;
+    font-size:1em;
+    color:#fff;
+    background:var(--ooh-pink);
+    padding:0 .15em 0 .15em;
+    transform:rotate(-3deg);
+    border:3px solid var(--ooh-ink);
+    line-height:.9;
+  }
+  .ooh-hero p{
+    margin-top:24px;font-size:18px;line-height:1.5;max-width:480px;font-weight:500;
+  }
+  .ooh-hero .cta-row{margin-top:32px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+  .btn-ooh{
+    display:inline-flex;align-items:center;gap:10px;
+    background:var(--ooh-pink);color:#fff;
+    border:3px solid var(--ooh-ink);
+    padding:16px 28px;border-radius:100px;
+    font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:20px;letter-spacing:.06em;text-transform:uppercase;
+    box-shadow:6px 6px 0 var(--ooh-ink);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-ooh:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--ooh-ink)}
+  .btn-ooh.ghost{background:#fff;color:var(--ooh-ink)}
+
+  .ooh-hero-visual{
+    position:relative;height:520px;
+  }
+  .ooh-hero-visual .blob{
+    position:absolute;background:var(--ooh-lavender);
+    border:3px solid var(--ooh-ink);
+    border-radius:48% 52% 60% 40% / 50% 45% 55% 50%;
+    inset:20px;
+    box-shadow:8px 8px 0 var(--ooh-ink);
+  }
+  .ooh-hero-visual .blob.b2{
+    background:var(--ooh-pink);
+    inset:auto -10% 8% auto;width:240px;height:240px;
+    border-radius:55% 45% 60% 40% / 50% 60% 40% 50%;
+  }
+  .ooh-hero-visual .product{
+    position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) rotate(-4deg);
+    width:78%;
+    filter:drop-shadow(0 30px 30px rgba(0,0,0,.2));
+  }
+  .ooh-hero-visual .sticker{
+    position:absolute;
+    background:var(--ooh-yellow);border:3px solid var(--ooh-ink);
+    border-radius:50%;
+    width:120px;height:120px;display:grid;place-items:center;text-align:center;
+    font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;
+    text-transform:uppercase;font-size:18px;line-height:1;
+    transform:rotate(12deg);
+    z-index:3;
+  }
+  .ooh-hero-visual .sticker.s1{top:30px;left:-10px;background:var(--ooh-yellow)}
+  .ooh-hero-visual .sticker.s2{
+    bottom:30px;left:30px;background:#fff;
+    width:110px;height:110px;transform:rotate(-8deg);
+    font-size:15px;
+  }
+
+  /* sticks grid */
+  .sticks{
+    background:var(--ooh-pink);color:#fff;
+    padding:80px 0 100px;
+    position:relative;
+    border-top:3px solid var(--ooh-ink);
+  }
+  .sticks-head{
+    max-width:1500px;margin:0 auto;padding:0 40px;
+    display:flex;justify-content:space-between;align-items:end;gap:40px;flex-wrap:wrap;
+  }
+  .sticks-head h3{
+    font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;
+    font-size:clamp(56px, 8vw, 120px);line-height:.85;text-transform:uppercase;letter-spacing:-0.005em;
+  }
+  .sticks-head h3 .y{color:var(--ooh-yellow)}
+  .sticks-head .lede{max-width:420px;font-size:22px;line-height:1.4;font-weight:600;color:var(--ooh-pink)}
+
+  .sticks-grid{
+    margin-top:60px;
+    max-width:1500px;margin-left:auto;margin-right:auto;padding:0 40px;
+    display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+  }
+  .stick-card{
+    background:var(--ooh-yellow);color:var(--ooh-ink);
+    border:3px solid var(--ooh-ink);
+    border-radius:24px;
+    padding:24px 20px 28px;
+    position:relative;
+    box-shadow:6px 6px 0 var(--ooh-ink);
+    transition:transform .25s ease, box-shadow .25s ease;
+    overflow:hidden;
+    text-align:center;
+  }
+  .stick-card:nth-child(1){background:var(--ooh-pink);color:#fff;transform:rotate(-2deg)}
+  .stick-card:nth-child(2){background:var(--ooh-yellow);transform:rotate(1.5deg)}
+  .stick-card:nth-child(3){background:var(--ooh-lavender);transform:rotate(-1deg)}
+  .stick-card:nth-child(4){background:#fff;transform:rotate(2deg)}
+  .stick-card:hover{transform:translateY(-6px) rotate(0);box-shadow:10px 10px 0 var(--ooh-ink)}
+
+  .stick-card .flag{
+    display:inline-block;
+    background:var(--ooh-ink);color:var(--ooh-yellow);
+    font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:italic;
+    font-size:13px;letter-spacing:.18em;text-transform:uppercase;
+    padding:5px 12px;border-radius:100px;
+  }
+  .stick-card .img-wrap{
+    margin:14px 0 8px;
+    aspect-ratio: 1/1;
+    display:grid;place-items:center;
+    background:transparent;
+  }
+  .stick-card .img-wrap img{
+    max-width:78%;
+    max-height:78%;
+    width:auto;height:auto;
+    object-fit:contain;
+    filter:drop-shadow(0 18px 18px rgba(0,0,0,.15));
+  }
+  .stick-card h4{
+    font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;
+    font-size:38px;text-transform:uppercase;line-height:.9;
+  }
+  .stick-card .meta{
+    margin-top:8px;font-size:13px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;opacity:.75;
+  }
+  .stick-card .price{
+    position:absolute;top:18px;right:18px;
+    background:var(--ooh-ink);color:#fff;
+    width:54px;height:54px;border-radius:50%;
+    display:grid;place-items:center;
+    font-family:'Barlow Condensed',sans-serif;font-weight:900;
+    font-size:14px;line-height:1;text-align:center;
+    transform:rotate(8deg);
+  }
+  .stick-card .price small{display:block;font-size:9px;font-weight:700;opacity:.7}
+
+  /* big OOH! barattoli row */
+  .pots{
+    background:var(--ooh-lavender);color:var(--ooh-ink);
+    padding:120px 0;
+    border-top:3px solid var(--ooh-ink);
+    position:relative;
+    overflow:hidden;
+  }
+  .pots::before{
+    content:"OOH! OOH! OOH! OOH! OOH! OOH! OOH!";
+    position:absolute;top:30px;left:0;right:0;
+    font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;
+    font-size:200px;line-height:.8;
+    color:rgba(22,18,34,.05);
+    white-space:nowrap;text-transform:uppercase;
+    pointer-events:none;
+  }
+  .pots-wrap{max-width:1500px;margin:0 auto;padding:0 40px;position:relative;z-index:2}
+  .pots-head{display:flex;justify-content:space-between;align-items:end;gap:40px;flex-wrap:wrap}
+  .pots-head h3{
+    font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;
+    font-size:clamp(56px, 8vw, 120px);line-height:.85;text-transform:uppercase;
+  }
+  .pots-head h3 .pink{color:var(--ooh-pink)}
+  .pots-head .lede{max-width:460px;font-size:22px;line-height:1.4;font-weight:600;color:var(--ooh-pink)}
+
+  .pots-grid{
+    margin-top:60px;
+    display:grid;grid-template-columns:1fr 1fr;gap:32px;
+  }
+  .pot-card{
+    background:#fff;border:3px solid var(--ooh-ink);
+    border-radius:32px;
+    padding:40px;
+    position:relative;overflow:hidden;
+    box-shadow:8px 8px 0 var(--ooh-ink);
+    display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:20px;
+    min-height:380px;
+  }
+  .pot-card.fragole{background:var(--ooh-pink);color:#fff}
+  .pot-card.lamponi{background:var(--ooh-slate);color:#fff}
+  .pot-card h4{
+    font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;
+    font-size:64px;line-height:.85;text-transform:uppercase;
+  }
+  .pot-card .desc{margin-top:14px;font-size:15px;line-height:1.5;font-weight:500;max-width:300px}
+  .pot-card .tags{margin-top:22px;display:flex;gap:8px;flex-wrap:wrap}
+  .pot-card .tag{
+    background:rgba(255,255,255,.25);border:2px solid currentColor;
+    padding:6px 12px;border-radius:100px;
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;font-style:italic;
+    font-size:13px;letter-spacing:.1em;text-transform:uppercase;
+  }
+  .pot-card .visual{
+    aspect-ratio:1;display:grid;place-items:center;
+  }
+  .pot-card .visual img{width:90%;filter:drop-shadow(0 24px 24px rgba(0,0,0,.25))}
+  .pot-card .corner-sticker{
+    position:absolute;top:24px;right:24px;
+    background:var(--ooh-yellow);color:var(--ooh-ink);
+    border:3px solid var(--ooh-ink);
+    width:90px;height:90px;border-radius:50%;
+    display:grid;place-items:center;
+    font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;
+    font-size:14px;text-align:center;line-height:.95;text-transform:uppercase;
+    transform:rotate(-10deg);
+  }
+
+  /* ============ FOOTER ============ */
+  .footer{
+    background:#2A2418;color:#f6f6f6;
+    padding:80px 40px 40px;
+    font-family:'Inter',sans-serif;
+    position:relative;
+    border-top:3px solid #2A2418;
+  }
+  .footer-inner{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px}
+  .footer .logo{color:#fff}
+  .footer h5{
+    font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#999;margin-bottom:18px;
+  }
+  .footer ul{list-style:none;display:flex;flex-direction:column;gap:10px;font-size:14px}
+  .footer ul a:hover{color:var(--terracotta)}
+  .footer .blurb{font-size:14px;line-height:1.6;color:#bbb;max-width:340px;margin-top:18px}
+  .footer-socials{margin-top:24px;display:flex;gap:8px;flex-wrap:wrap}
+  .footer-socials a{padding:8px 16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:100px;font-size:12px;letter-spacing:.05em;color:#ddd;text-decoration:none;transition:background .15s,border-color .15s}
+  .footer-socials a:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);color:#fff}
+  .footer-bottom{
+    margin-top:60px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);
+    display:flex;justify-content:space-between;font-size:12px;color:#888;
+  }
+
+  /* ===== HAMBURGER ===== */
+  .nav-hamburger{
+    display:none;flex-direction:column;gap:5px;
+    width:36px;height:36px;justify-content:center;align-items:center;
+    padding:6px;border-radius:8px;transition:background .15s;
+  }
+  .nav-hamburger:hover{background:rgba(0,0,0,.05)}
+  .nav-hamburger span{
+    display:block;width:20px;height:1.5px;
+    background:var(--ink);border-radius:2px;
+    transition:transform .3s ease,opacity .2s ease;
+    transform-origin:center;
+  }
+  .nav-hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+  .nav-hamburger[aria-expanded="true"] span:nth-child(2){opacity:0;transform:scaleX(0)}
+  .nav-hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+  .nav-mobile-menu{
+    display:none;flex-direction:column;
+    border-top:1px solid #ececec;
+    padding:8px 40px 28px;
+    font-family:'Inter',sans-serif;
+  }
+  .nav-mobile-menu.open{display:flex}
+  .nav-mobile-menu a[data-key]{
+    display:block;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;font-size:30px;font-weight:400;
+    letter-spacing:-0.01em;color:var(--ink);
+    padding:14px 0;border-bottom:1px solid #ececec;
+    text-decoration:none;transition:color .2s;
+  }
+  .nav-mobile-menu a[data-key]:hover,.nav-mobile-menu a[data-key].active{color:var(--terracotta)}
+  .nav-mobile-lang{
+    margin-top:20px;display:flex;gap:10px;align-items:center;
+    font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+  }
+  .nav-mobile-lang .lang{opacity:.5;text-decoration:none;color:inherit}
+  .nav-mobile-lang .lang.active{opacity:1;font-weight:600}
+  .nav-mobile-lang .sep{opacity:.3}
+
+  /* responsive */
+  @media(max-width:1100px){
+    .dubai-grid{grid-template-columns:1fr;gap:48px}
+    .formats{grid-template-columns:1fr}
+    .ooh-hero{grid-template-columns:1fr}
+    .ooh-hero-visual{height:420px}
+    .sticks-grid{grid-template-columns:repeat(2,1fr)}
+    .pots-grid{grid-template-columns:1fr}
+    .pot-card{grid-template-columns:1fr}
+    .footer-inner{grid-template-columns:1fr 1fr}
+    .story-strip{grid-template-columns:1fr;border-bottom:none}
+    .story-cell{border-right:none;border-bottom:1px solid rgba(42,36,24,.18)}
+    .chooser{grid-template-columns:1fr}
+    .chooser .divider{width:80%;height:1px;margin:0 auto}
+  }
+  @media(max-width:900px){
+    .nav-links{display:none}
+    .nav-hamburger{display:flex}
+    .nav-cta{display:none}
+  }
+  @media(max-width:640px){
+    .nav-inner{padding:14px 20px}
+    .nav-mobile-menu{padding:8px 20px 24px}
+    .hero{padding:48px 20px 0}
+    .dubai{padding:60px 0 80px}
+    .dubai-wrap{padding:0 20px}
+    .ooh-wrap{padding:0 20px}
+    .ooh-hero{padding:40px 20px}
+    .ooh-hero-visual{height:280px}
+    .sticks-head{padding:0 20px}
+    .sticks{padding:48px 0 60px}
+    .sticks-grid{grid-template-columns:1fr;padding:0 20px;margin-top:28px}
+    .pots-wrap{padding:0 20px}
+    .pots-grid{gap:20px}
+    .pot-card{grid-template-columns:1fr;padding:28px 24px;min-height:auto}
+    .pot-card h4{font-size:48px}
+    .dubai-product .badge{width:60px;height:60px;font-size:11px;top:12px;left:12px}
+    .format-card{padding:36px 24px 28px}
+    .format-card .pill{font-size:10px;padding:5px 10px;top:14px;right:14px}
+    .footer-inner{grid-template-columns:1fr;gap:32px}
+    .footer{padding:48px 20px 32px}
+    .footer-bottom{flex-direction:column;gap:8px;align-items:flex-start}
+    .ornament{display:none}
+    .chooser-card{padding:60px 24px;min-height:280px}
+  }
+  @media(max-width:480px){
+    .chooser-card .name{font-size:clamp(52px,15vw,80px)}
+    .hero-sub{font-size:18px}
+    .stick-card h4{font-size:30px}
+    .transition .stamp{font-size:30px;padding:14px 26px}
+  }
+</style>
+</head>
+<body>
+
+<div data-mount="nav"></div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <h1>
+    Frozen <em>dessert</em><br />
+    per tutti <span class="accent">i&nbsp;gusti</span>.
+  </h1>
+  <p class="hero-sub">
+    Due mondi, una passione. Dalla pasticceria mediorientale più ricercata al gusto pop dei tuoi pomeriggi d'estate. Scegli il tuo viaggio.
+  </p>
+
+  <div class="chooser">
+    <a class="chooser-card dubai" href="dubai-chocolate.html">
+      <div class="name">Dubai<br/>Chocolate</div>
+      <div class="arrow">
+        L'originale, davvero
+        <svg width="22" height="10" viewBox="0 0 22 10" fill="none" stroke="currentColor"><path d="M0 5h20M16 1l4 4-4 4" stroke-width="1.2"/></svg>
+      </div>
+    </a>
+    <div class="divider"></div>
+    <a class="chooser-card ooh" href="ooh.html">
+      <div class="name">OOH!</div>
+      <div class="arrow">
+        Frutta che fa OOH!
+        <svg width="22" height="10" viewBox="0 0 22 10" fill="none" stroke="currentColor"><path d="M0 5h20M16 1l4 4-4 4" stroke-width="1.2"/></svg>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ============ DUBAI CHOCOLATE ============ -->
+<section class="dubai" id="dubai" data-screen-label="Dubai Chocolate">
+  <div class="dubai-wrap">
+
+    <h1 class="dubai-headline">
+      Il <em>virale</em> Dubai Chocolate<br />
+      in un altro <span class="pist">formato</span>,<br />
+      con pistacchio<br />
+      e <em>kataifi</em> croccante.
+    </h1>
+
+    <div class="dubai-grid">
+      <div class="dubai-product">
+        <div class="badge">Premium<br/>Quality</div>
+        <img src="assets/dubai-chocolate.png" alt="Dubai Chocolate Dessert — barattolo" />
+        <svg class="corner-illus" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2">
+          <path d="M20 50c0-18 14-32 30-32s30 14 30 32"/>
+          <path d="M30 50c8-2 16-2 22 0M30 60c8-2 16-2 22 0M30 70c8-2 16-2 22 0"/>
+        </svg>
+      </div>
+      <div class="dubai-copy">
+        <div class="dubai-tag">&nbsp;</div>
+        <h2 style="margin-top:18px">Pistacchio e <em>kataifi</em>, sotto un velo di cioccolato.</h2>
+        <p>Pistacchio e pasta kataifi, ricoperti di una sottilissima sfoglia di pasta di riso e cioccolato. Un dessert nato per essere conservato a -18° e gustato lentamente, come si fa con le cose belle.</p>
+
+      </div>
+    </div>
+
+    <!-- formats -->
+    <div class="formats">
+      <a class="format-card barattolo" href="dubai-chocolate.html" style="text-decoration:none;color:inherit;display:block">
+        <div class="pill">6 × 20 g | 120 g</div>
+        <div class="kind">Formato — barattolo</div>
+        <h3>Per quando hai tanta voglia di concederti <em>dolcezza</em>.</h3>
+        <p>Il formato da condividere o da tenere solo per te. 6 pezzi di puro piacere.</p>
+        <div class="visual">
+          <img src="assets/dubai-chocolate.png" alt="Barattolo Dubai Chocolate" />
+        </div>
+      </a>
+      <a class="format-card flowpack" href="dubai-chocolate.html" style="text-decoration:none;color:inherit;display:block">
+        <div class="pill">1 × 40 g</div>
+        <div class="kind">Formato — flowpack mini</div>
+        <h3>Per i momenti<br/><em>veloci</em>.</h3>
+        <p>Due monoporzioni da gustare ovunque vuoi.</p>
+        <div class="visual">
+          <img src="assets/dubai-flowpack.png" alt="Dubai Chocolate Dessert — flowpack monoporzione" />
+        </div>
+      </a>
+    </div>
+
+    <!-- story strip -->
+
+  </div>
+</section>
+
+<!-- ============ TRANSITION ============ -->
+<div class="transition">
+  <div class="stamp">E adesso, cambio mood</div>
+</div>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>OOH! che gusto<span class="dot"></span>FRESH FROZEN POPS<span class="dot"></span>FRUTTA · CIOCCOLATO · STICKS<span class="dot"></span>OOH! che gusto<span class="dot"></span>FRESH FROZEN POPS<span class="dot"></span>FRUTTA · CIOCCOLATO · STICKS<span class="dot"></span></span>
+    <span aria-hidden="true">OOH! che gusto<span class="dot"></span>FRESH FROZEN POPS<span class="dot"></span>FRUTTA · CIOCCOLATO · STICKS<span class="dot"></span>OOH! che gusto<span class="dot"></span>FRESH FROZEN POPS<span class="dot"></span>FRUTTA · CIOCCOLATO · STICKS<span class="dot"></span></span>
+  </div>
+</div>
+
+<!-- ============ OOH ============ -->
+<section class="ooh" id="ooh" data-screen-label="OOH">
+  <div class="ooh-hero">
+    <div>
+      <h2>
+        <span class="ooh-mark">OOH!</span><br />
+        <span class="outlined">FROZEN</span><br />
+        <span>FUN PER<br/>tutti<span class="pink">.</span></span>
+      </h2>
+      <p>Stick di frutta e barattoli colorati per zero noia. Per il pomeriggio in spiaggia, la pausa pranzo, il dopocena con gli amici.</p>
+      <div class="cta-row">
+        <a class="btn-ooh" href="#">Tutti i gusti →</a>
+      </div>
+    </div>
+    <div class="ooh-hero-visual">
+      <div class="blob"></div>
+      <div class="blob b2"></div>
+      <div class="sticker s1">Sembra<br/>vera frutta!</div>
+      <img class="product" src="assets/ooh-peach.png" alt="OOH Peach Stick" />
+      <div class="sticker s2">Ricetta<br/>vegan</div>
+    </div>
+  </div>
+
+  <!-- sticks -->
+  <section class="sticks">
+    <div class="sticks-head">
+      <h3>Mini sticks.<br/><span class="y">Maxi gusto.</span></h3>
+      <p class="lede">Una capsula trasparente che mostra cosa stai per mangiare, cioè un buonissimo sorbetto vegan. Niente sorprese, solo OOH!</p>
+    </div>
+    <div class="sticks-grid">
+      <article class="stick-card">
+        <div class="img-wrap"><img src="assets/ooh-strawberry.png" alt="" /></div>
+        <h4>Strawberry<br/>stick</h4>
+        <div class="meta">&nbsp;</div>
+      </article>
+      <article class="stick-card">
+        <div class="img-wrap"><img src="assets/ooh-lemon.png" alt="" /></div>
+        <h4>Lemon<br/>stick</h4>
+        <div class="meta">&nbsp;</div>
+      </article>
+      <article class="stick-card">
+        <div class="img-wrap"><img src="assets/ooh-peach.png" alt="" /></div>
+        <h4>Peach<br/>stick</h4>
+        <div class="meta">&nbsp;</div>
+      </article>
+      <article class="stick-card">
+        <div class="img-wrap"><img src="assets/ooh-mango.png" alt="" /></div>
+        <h4>Mango<br/>stick</h4>
+        <div class="meta">&nbsp;</div>
+      </article>
+    </div>
+  </section>
+
+  <!-- pots -->
+  <section class="pots">
+    <div class="pots-wrap">
+      <div class="pots-head">
+        <h3>I barattoli <span class="pink">che ti faranno</span><br/>"OOH!" davvero.</h3>
+        <p class="lede">Frutta intera ricoperta di cioccolato bianco e al latte. La cosa migliore che puoi tenere nel freezer, secondo noi.</p>
+      </div>
+
+      <div class="pots-grid">
+        <a class="pot-card fragole" href="ooh.html">
+          <div class="corner-sticker">New<br/>flavor</div>
+          <div>
+            <h4>OOH!<br/>Fragole</h4>
+            <p class="desc">Fragole baby intere, ricoperte di cioccolato bianco e al latte. 12 pezzi per barattolo,.</p>
+            <div class="tags">
+              <span class="tag">Cioccolato bianco e al latte</span>
+              <span class="tag">150g</span>
+              <span class="tag">80g</span>
+            </div>
+          </div>
+          <div class="visual"><img src="assets/ooh-fragole.png" alt="OOH! Fragole" /></div>
+        </a>
+        <a class="pot-card lamponi" href="ooh.html" style="background-color: rgb(204, 85, 231)">
+          <div class="corner-sticker">Best<br/>seller</div>
+          <div>
+            <h4>OOH!<br/>Lamponi</h4>
+            <p class="desc">Lamponi interi, freschi, ghiacciati e tuffati nel cioccolato. Acidità che incontra dolcezza in due tempi: croc, poi ahhh.</p>
+            <div class="tags">
+              <span class="tag">Cioccolato bianco e al latte</span>
+              <span class="tag">150g</span>
+              <span class="tag">80g</span>
+            </div>
+          </div>
+          <div class="visual"><img src="assets/ooh-lamponi.png" alt="OOH! Lamponi" /></div>
+        </a>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- B2B / PARTNER -->
+<section class="b2b-cta" style="background:#EDE6CF;color:var(--ink);position:relative;overflow:hidden">
+  <div style="max-width:1200px;margin:0 auto;position:relative;z-index:2">
+
+    <div style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:28px">Diventa partner</div>
+
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(48px,7vw,96px);line-height:.98;letter-spacing:-0.02em;max-width:1000px">
+      Vuoi i prodotti <em style="font-style:italic;color:var(--terracotta);font-weight:400">Desserty</em><br/>
+      sui tuoi scaffali?
+    </h2>
+
+    <div class="b2b-grid" style="max-width:1100px">
+      <div style="background:#fff;border-radius:12px;padding:40px;border:1px solid rgba(42,36,24,.1)">
+        <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:32px;color:var(--ink);margin-bottom:16px">Sei un supermercato?</div>
+        <p style="font-family:'Inter',sans-serif;font-weight:300;font-size:16px;line-height:1.65;color:var(--ink-soft)">Inserisci Dubai Chocolate, gli stick OOH! e i barattoli OOH! nel tuo banco frigo. Margini chiari, rotazione veloce, materiale espositivo incluso.</p>
+      </div>
+      <div style="background:#fff;border-radius:12px;padding:40px;border:1px solid rgba(42,36,24,.1)">
+        <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:32px;color:var(--ink);margin-bottom:16px">Sei un bar o una gelateria?</div>
+        <p style="font-family:'Inter',sans-serif;font-weight:300;font-size:16px;line-height:1.65;color:var(--ink-soft)">Crea per la tua gelateria gusti superlativi al Dubai Chocolate, oppure agli OOH! Lamponi o Fragole ricoperti di cioccolato. Contattaci per saperne di più!</p>
+      </div>
+    </div>
+
+    <div style="margin-top:56px;display:flex;gap:18px;flex-wrap:wrap;align-items:center;justify-content:center">
+      <a href="diventa-partner.html" style="display:inline-flex;align-items:center;gap:12px;background:var(--terracotta);color:#fff;font-family:'Inter',sans-serif;font-weight:500;font-size:15px;letter-spacing:.04em;padding:18px 30px;border-radius:100px;text-decoration:none">
+        Diventa partner →
+      </a>
+      <a href="diventa-partner.html" style="display:inline-flex;align-items:center;gap:12px;color:var(--ink-soft);font-family:'Inter',sans-serif;font-weight:400;font-size:15px;text-decoration:none;border-bottom:1px solid rgba(42,36,24,.3);padding-bottom:2px">
+        Scrivici a info@dessertyfood.com
+      </a>
+    </div>
+  </div>
+
+</section>
+
+<div data-mount="footer"></div>
+<script src="shared.js"></script>
+
+</body>
+</html>

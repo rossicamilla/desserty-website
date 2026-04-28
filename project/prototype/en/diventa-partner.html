@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Become a Partner — Desserty</title>
+<meta name="description" content="Stock Desserty products in your supermarket or ice cream shop. We're looking for partners who share our obsession with quality. Fill in the form to get trade information.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.desserty.it/en/diventa-partner.html">
+<link rel="alternate" hreflang="it" href="https://www.desserty.it/diventa-partner.html">
+<link rel="alternate" hreflang="en" href="https://www.desserty.it/en/diventa-partner.html">
+<link rel="alternate" hreflang="x-default" href="https://www.desserty.it/diventa-partner.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Desserty">
+<meta property="og:title" content="Become a Partner — Desserty">
+<meta property="og:description" content="Stock Desserty products in your supermarket or ice cream shop. Fill in the form to get trade information.">
+<meta property="og:url" content="https://www.desserty.it/en/diventa-partner.html">
+<meta property="og:image" content="https://www.desserty.it/assets/og-desserty.jpg">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Become a Partner — Desserty">
+<meta name="twitter:description" content="Stock Desserty in your store. Fill in the form to get trade information.">
+<meta name="twitter:image" content="https://www.desserty.it/assets/og-desserty.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.desserty.it/en/"},{"@type":"ListItem","position":2,"name":"Become a Partner","item":"https://www.desserty.it/en/diventa-partner.html"}]},{"@type":"ContactPage","url":"https://www.desserty.it/en/diventa-partner.html","name":"Become a Partner — Desserty"}]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
+<style>
+  .partner-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:64px;padding-bottom:120px;align-items:start}
+  .why{display:flex;flex-direction:column;gap:0;position:sticky;top:100px}
+  .why .item{padding:24px 0;border-top:1px solid var(--neutral-rule)}
+  .why .item:last-child{border-bottom:1px solid var(--neutral-rule)}
+  .why .item .num{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--terracotta);font-size:14px;letter-spacing:.1em}
+  .why .item h3{margin-top:6px;font-family:'Cormorant Garamond',serif;font-weight:400;font-size:28px;line-height:1.1}
+  .why .item p{margin-top:10px;font-size:15px;line-height:1.6;color:var(--neutral-soft)}
+
+  .form-shell{background:#fff;border:1px solid var(--neutral-rule);border-radius:12px;padding:40px;display:flex;flex-direction:column;gap:24px;box-shadow:0 30px 80px -50px rgba(58,46,16,.25)}
+  .form-head{display:flex;flex-direction:column;gap:18px}
+  .step-meta{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--neutral-soft)}
+  .step-meta .of{font-family:'Cormorant Garamond',serif;font-style:italic;text-transform:none;letter-spacing:0;font-size:14px;color:var(--terracotta)}
+  .progress{height:4px;background:var(--neutral-rule);border-radius:100px;overflow:hidden;position:relative}
+  .progress .bar{position:absolute;inset:0 auto 0 0;background:var(--terracotta);border-radius:100px;transition:width .5s cubic-bezier(.7,0,.3,1);width:0%}
+  .form-shell h2{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:36px;line-height:1.05;letter-spacing:-0.01em}
+  .form-shell h2 em{font-style:italic;color:var(--terracotta);font-weight:400}
+  .form-shell .subhead{font-size:14px;line-height:1.6;color:var(--neutral-soft);margin-top:-8px}
+
+  .step{display:none;flex-direction:column;gap:18px;animation:fadeIn .35s ease both}
+  .step.active{display:flex}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+  .field{display:flex;flex-direction:column;gap:6px}
+  .field label{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--neutral-soft);font-weight:500}
+  .field label .req{color:var(--terracotta);margin-left:4px}
+  .field input,.field select,.field textarea{padding:14px 16px;border:1px solid var(--neutral-rule);border-radius:8px;font:inherit;font-size:14px;background:var(--paper);outline:none;transition:border-color .2s,background .2s}
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--neutral-ink);background:#fff}
+  .field input.error,.field select.error,.field textarea.error{border-color:#c93b1f;background:rgba(201,59,31,.04)}
+  .field .hint{font-size:12px;color:var(--neutral-soft);font-style:italic}
+  .field .err{font-size:12px;color:#c93b1f;display:none}
+  .field.show-error .err{display:block}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+  .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .tile{padding:18px 14px;border:1px solid var(--neutral-rule);border-radius:10px;background:var(--paper);cursor:pointer;text-align:left;display:flex;flex-direction:column;gap:6px;transition:all .2s ease;font:inherit}
+  .tile:hover{border-color:var(--neutral-ink)}
+  .tile .ic{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;color:var(--terracotta);line-height:1}
+  .tile .lbl{font-size:14px;font-weight:500;color:var(--neutral-ink)}
+  .tile .sub{font-size:12px;color:var(--neutral-soft);line-height:1.4}
+  .tile.active{background:var(--neutral-ink);border-color:var(--neutral-ink);color:var(--paper)}
+  .tile.active .ic{color:var(--cream)}
+  .tile.active .lbl{color:#fff}
+  .tile.active .sub{color:rgba(255,255,255,.7)}
+
+  .prods{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .prod{position:relative;padding:18px;border:1px solid var(--neutral-rule);border-radius:10px;background:var(--paper);cursor:pointer;display:flex;align-items:center;gap:14px;transition:all .2s}
+  .prod:hover{border-color:var(--neutral-ink)}
+  .prod input{position:absolute;opacity:0;pointer-events:none}
+  .prod .check{width:22px;height:22px;border-radius:6px;border:1.5px solid var(--neutral-rule);flex:none;display:grid;place-items:center;background:#fff;transition:all .2s}
+  .prod .check svg{opacity:0;transform:scale(.6);transition:all .2s}
+  .prod.checked{border-color:var(--neutral-ink);background:#fff}
+  .prod.checked .check{background:var(--terracotta);border-color:var(--terracotta)}
+  .prod.checked .check svg{opacity:1;transform:none;color:#fff}
+  .prod .nm{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:var(--neutral-ink)}
+  .prod .ds{font-size:12px;color:var(--neutral-soft);margin-top:2px}
+
+  .volume{padding:18px;background:var(--paper);border:1px solid var(--neutral-rule);border-radius:10px}
+  .volume .vrow{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
+  .volume .vrow .vlbl{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--neutral-soft)}
+  .volume .vrow .vval{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:24px;color:var(--terracotta)}
+  .volume input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:4px;background:var(--neutral-rule);border-radius:100px;outline:none}
+  .volume input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:22px;height:22px;border-radius:50%;background:var(--neutral-ink);cursor:pointer;border:3px solid #fff;box-shadow:0 0 0 1px var(--neutral-rule)}
+  .volume input[type=range]::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--neutral-ink);cursor:pointer;border:3px solid #fff;box-shadow:0 0 0 1px var(--neutral-rule)}
+  .volume .ticks{display:flex;justify-content:space-between;margin-top:10px;font-size:11px;color:var(--neutral-soft);letter-spacing:.05em}
+
+  .review{background:var(--paper);border:1px solid var(--neutral-rule);border-radius:10px;padding:24px;display:flex;flex-direction:column;gap:14px}
+  .review .rrow{display:grid;grid-template-columns:140px 1fr auto;gap:16px;align-items:baseline;font-size:14px;padding-bottom:12px;border-bottom:1px dashed var(--neutral-rule)}
+  .review .rrow:last-child{border-bottom:none;padding-bottom:0}
+  .review dt{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--neutral-soft)}
+  .review dd{color:var(--neutral-ink);font-weight:500}
+  .review .rrow .edit{font-size:12px;color:var(--terracotta);text-decoration:underline;cursor:pointer;background:none;border:none;padding:0;font-family:inherit}
+  .review .rrow .edit:hover{color:var(--neutral-ink)}
+
+  .nav-row{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:8px;flex-wrap:wrap}
+  .btn-back{background:none;border:none;font:inherit;color:var(--neutral-soft);font-size:13px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;padding:14px 0;display:inline-flex;align-items:center;gap:8px}
+  .btn-back:hover{color:var(--neutral-ink)}
+  .btn-back:disabled{opacity:.3;cursor:not-allowed}
+  .btn-next{padding:16px 28px;border-radius:100px;background:var(--neutral-ink);color:var(--paper);font-size:13px;letter-spacing:.15em;text-transform:uppercase;font-weight:500;cursor:pointer;border:none;display:inline-flex;align-items:center;gap:10px;transition:background .2s ease,transform .15s ease}
+  .btn-next:hover{background:var(--terracotta)}
+  .btn-next:active{transform:scale(.98)}
+  .btn-next svg{transition:transform .2s}
+  .btn-next:hover svg{transform:translateX(4px)}
+
+  .success{display:none;flex-direction:column;align-items:center;gap:18px;text-align:center;padding:40px 20px}
+  .success.active{display:flex;animation:fadeIn .5s ease both}
+  .success .seal{width:96px;height:96px;border-radius:50%;background:var(--terracotta);color:#fff;display:grid;place-items:center;box-shadow:0 20px 50px -20px rgba(249,124,70,.55);animation:pop .55s cubic-bezier(.34,1.56,.64,1) both}
+  @keyframes pop{0%{transform:scale(.4);opacity:0}60%{transform:scale(1.08)}100%{transform:scale(1);opacity:1}}
+  .success h2{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:48px;line-height:1.05;letter-spacing:-0.015em}
+  .success h2 em{font-style:italic;color:var(--terracotta);font-weight:400}
+  .success p{font-size:15px;color:var(--neutral-soft);line-height:1.6;max-width:420px}
+  .success .ref{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--neutral-soft);background:var(--paper);padding:8px 18px;border-radius:100px;border:1px solid var(--neutral-rule);letter-spacing:.05em}
+  .success .ref b{color:var(--neutral-ink);font-weight:500;letter-spacing:.1em}
+  .success .actions{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap;justify-content:center}
+  .success .actions a{padding:14px 24px;border-radius:100px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--neutral-ink);color:var(--neutral-ink)}
+  .success .actions a.primary{background:var(--neutral-ink);color:var(--paper)}
+  .success .actions a:hover{background:var(--terracotta);border-color:var(--terracotta);color:#fff}
+
+  .partner-grid > aside{position:sticky;top:100px;display:flex;flex-direction:column;gap:14px}
+  .press-banner{background:var(--terracotta);color:#fff;border-radius:12px;padding:40px;flex:1}
+  .press-banner .eyebrow{font-size:11px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;opacity:.9;margin-bottom:16px}
+  .press-banner h3{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:32px;line-height:1.1;color:#fff}
+  .press-banner h3 em{font-style:italic;font-weight:300}
+  .press-banner p{margin-top:14px;font-size:15px;line-height:1.6;color:rgba(255,255,255,.9)}
+  .press-banner-cta{display:inline-flex;margin-top:24px;padding:12px 22px;background:#fff;color:var(--terracotta);border-radius:100px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;text-decoration:none}
+  .press-banner-cta:hover{opacity:.9}
+
+  @media(max-width:900px){
+    .partner-grid{grid-template-columns:1fr;gap:32px}
+    .partner-grid > aside{position:static}
+    .row{grid-template-columns:1fr}
+    .tiles{grid-template-columns:1fr 1fr}
+    .prods{grid-template-columns:1fr}
+    .review .rrow{grid-template-columns:120px 1fr}
+    .review .rrow .edit{grid-column:2;justify-self:end}
+    .form-shell{padding:28px}
+  }
+  @media(max-width:640px){
+    .form-shell{padding:20px}
+    .tiles{grid-template-columns:1fr}
+    .row{gap:16px}
+    .press-banner{padding:32px 20px}
+  }
+  @media(max-width:480px){
+    .review .rrow{grid-template-columns:1fr}
+    .review .rrow .edit{grid-column:1;justify-self:start;margin-top:8px}
+  }
+</style>
+</head>
+<body>
+<div data-mount="nav"></div>
+
+<section class="page-hero">
+  <div class="eyebrow">For buyers</div>
+  <h1>Stock Desserty<br/>in your <em>stores</em>.</h1>
+  <p class="lede">We're looking for supermarkets and gelaterias that share our obsession with quality. If that's you, let's talk.</p>
+</section>
+
+<div class="container">
+  <div class="partner-grid">
+    <aside>
+      <div class="press-banner">
+        <div class="eyebrow">Press &amp; media</div>
+        <h3>Looking for journalists and creators who want to <em>tell our story</em>.</h3>
+        <p>Are you a journalist, food writer, blogger, or creator? Want to cover Dubai Chocolate Dessert or OOH!? Write to us — we'll send samples, a press kit, and everything you need.</p>
+        <a href="diventa-partner.html" class="press-banner-cta">Get in touch →</a>
+      </div>
+      <div style="margin-top:14px;background:#fff;border:1px solid var(--neutral-rule);border-radius:12px;padding:24px 28px">
+        <div style="font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--neutral-soft);font-weight:600;margin-bottom:10px">Direct contact</div>
+        <a href="mailto:info@dessertyfood.com" style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:var(--neutral-ink);text-decoration:none">info@dessertyfood.com</a>
+        <p style="margin-top:6px;font-size:13px;color:var(--neutral-soft)">We'll be in touch soon.</p>
+      </div>
+    </aside>
+
+    <div class="form-shell" id="formShell">
+      <div class="form-head" id="formHead">
+        <div class="step-meta">
+          <span id="stepLabel">Step 01 — Your business</span>
+          <span class="of">step <span id="stepNum">1</span> of 4</span>
+        </div>
+        <div class="progress"><div class="bar" id="progressBar"></div></div>
+        <h2 id="stepTitle">Tell us about <em>you</em>.</h2>
+        <p class="subhead" id="stepSub">Let's start with the basics — who you are and how to reach you.</p>
+      </div>
+
+      <form id="partnerForm" novalidate autocomplete="off">
+        <!-- STEP 1 -->
+        <div class="step active" data-step="1">
+          <div class="row">
+            <div class="field" data-required>
+              <label>First name <span class="req">*</span></label>
+              <input type="text" name="firstName" placeholder="Mario"/>
+              <span class="err">Please enter your first name</span>
+            </div>
+            <div class="field" data-required>
+              <label>Last name <span class="req">*</span></label>
+              <input type="text" name="lastName" placeholder="Rossi"/>
+              <span class="err">Please enter your last name</span>
+            </div>
+          </div>
+          <div class="field" data-required>
+            <label>Your role <span class="req">*</span></label>
+            <input type="text" name="role" placeholder="Owner, Purchasing manager..."/>
+            <span class="err">Please enter your role</span>
+          </div>
+          <div class="row">
+            <div class="field" data-required data-type="email">
+              <label>Email <span class="req">*</span></label>
+              <input type="email" name="email" placeholder="mario@example.com"/>
+              <span class="err">Please enter a valid email</span>
+            </div>
+            <div class="field">
+              <label>Phone</label>
+              <input type="tel" name="phone" placeholder="+39 ..."/>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="step" data-step="2">
+          <div class="field" data-required data-type="tiles" data-name="businessType">
+            <label>Type of business <span class="req">*</span></label>
+            <div class="tiles">
+              <button type="button" class="tile" data-value="Gelateria"><span class="ic">a</span><span class="lbl">Gelateria</span><span class="sub">Counter service, display cabinet</span></button>
+              <button type="button" class="tile" data-value="Pasticceria"><span class="ic">b</span><span class="lbl">Patisserie</span><span class="sub">Counter &amp; take-away sales</span></button>
+              <button type="button" class="tile" data-value="Supermercato"><span class="ic">c</span><span class="lbl">Supermarket</span><span class="sub">Frozen aisle, retail chain</span></button>
+            </div>
+            <span class="err">Please select a business type</span>
+          </div>
+          <div class="field" data-required>
+            <label>Business name <span class="req">*</span></label>
+            <input type="text" name="businessName" placeholder='e.g. "Gelateria al Centro"'/>
+            <span class="err">Please enter the business name</span>
+          </div>
+          <div class="row">
+            <div class="field" data-required>
+              <label>City <span class="req">*</span></label>
+              <input type="text" name="city" placeholder="Milan"/>
+              <span class="err">Please enter the city</span>
+            </div>
+            <div class="field">
+              <label>Province / Region</label>
+              <input type="text" name="province" placeholder="MI" maxlength="4"/>
+            </div>
+          </div>
+          <div class="field">
+            <label>Website or Instagram</label>
+            <input type="text" name="web" placeholder="@yourBusiness — or your website"/>
+            <span class="hint">Helps us get to know you before the call.</span>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="step" data-step="3">
+          <div class="field" data-required data-type="prods" data-name="products">
+            <label>Which lines are you interested in? <span class="req">*</span></label>
+            <div class="prods">
+              <label class="prod" data-value="Dubai Chocolate">
+                <input type="checkbox" name="products[]" value="Dubai Chocolate"/>
+                <span class="check"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M2 7l3.5 3.5L12 3.5"/></svg></span>
+                <div><div class="nm">Dubai Chocolate</div><div class="ds">500ml jar + mini flowpack</div></div>
+              </label>
+              <label class="prod" data-value="OOH! Sticks">
+                <input type="checkbox" name="products[]" value="OOH! Sticks"/>
+                <span class="check"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M2 7l3.5 3.5L12 3.5"/></svg></span>
+                <div><div class="nm">OOH! Sticks</div><div class="ds">Fruit sticks, 4 flavours</div></div>
+              </label>
+              <label class="prod" data-value="OOH! Barattoli">
+                <input type="checkbox" name="products[]" value="OOH! Barattoli"/>
+                <span class="check"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M2 7l3.5 3.5L12 3.5"/></svg></span>
+                <div><div class="nm">OOH! Jars</div><div class="ds">Whole fruit + chocolate</div></div>
+              </label>
+              <label class="prod" data-value="Tutto">
+                <input type="checkbox" name="products[]" value="Full catalogue"/>
+                <span class="check"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M2 7l3.5 3.5L12 3.5"/></svg></span>
+                <div><div class="nm">Full catalogue</div><div class="ds">Show me everything, I'll decide later</div></div>
+              </label>
+            </div>
+            <span class="err">Please select at least one line</span>
+          </div>
+
+          <div class="field">
+            <label>Estimated starting volume</label>
+            <div class="volume">
+              <div class="vrow">
+                <span class="vlbl">Estimated monthly order</span>
+                <span class="vval"><span id="volVal">50</span> units</span>
+              </div>
+              <input type="range" name="volume" id="volRange" min="20" max="500" step="10" value="50"/>
+              <div class="ticks"><span>20</span><span>100</span><span>250</span><span>500+</span></div>
+            </div>
+            <span class="hint">A rough estimate is fine — we'll use it to size up the first offer.</span>
+          </div>
+
+          <div class="field">
+            <label>Do you already have an artisan ice cream supplier?</label>
+            <select name="hasSupplier">
+              <option value="">Select...</option>
+              <option>Yes, and I want to add Desserty alongside</option>
+              <option>Yes, but I'm considering switching</option>
+              <option>No, this would be the first</option>
+              <option>I'd rather not say</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- STEP 4 — REVIEW -->
+        <div class="step" data-step="4">
+          <div class="review" id="reviewBox"></div>
+          <div class="field">
+            <label>Free notes (optional)</label>
+            <textarea name="notes" rows="4" placeholder="Seasonality, logistics, upcoming events — anything that helps us prepare for the call..."></textarea>
+          </div>
+          <label style="display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--neutral-soft);line-height:1.5;cursor:pointer">
+            <input type="checkbox" name="privacy" id="privacy" style="margin-top:3px;accent-color:var(--terracotta)"/>
+            <span>I have read and accept the <a href="privacy.html" style="color:var(--terracotta);text-decoration:underline">privacy policy</a> and consent to my data being processed so we can get back to you.</span>
+          </label>
+          <span class="err" id="privacyErr" style="font-size:12px;color:#c93b1f;display:none">You need to accept the privacy policy to continue.</span>
+        </div>
+
+        <div class="nav-row" id="navRow">
+          <button type="button" class="btn-back" id="btnBack" disabled>
+            <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14 5H1M5 1L1 5l4 4"/></svg>
+            Back
+          </button>
+          <button type="button" class="btn-next" id="btnNext">
+            Continue
+            <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 5h13M9 1l4 4-4 4"/></svg>
+          </button>
+        </div>
+      </form>
+
+      <div class="success" id="success">
+        <div class="seal">
+          <svg width="42" height="42" viewBox="0 0 42 42" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M8 22l8 8L34 12"/></svg>
+        </div>
+        <h2>Thanks, <em id="successName">partner</em>.<br/>We've got your request.</h2>
+        <p>A member of our sales team will be in touch within <b>48 working hours</b> at the address you gave us. In the meantime, check your inbox — we've already sent you a confirmation email.</p>
+        <div class="actions">
+          <a href="index.html" class="primary">Back to home</a>
+          <a href="storia.html">Read our story</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div data-mount="footer"></div>
+<script src="shared.js"></script>
+<script>
+(function(){
+  const form = document.getElementById('partnerForm');
+  const steps = [...form.querySelectorAll('.step')];
+  const bar = document.getElementById('progressBar');
+  const stepNumEl = document.getElementById('stepNum');
+  const stepLabelEl = document.getElementById('stepLabel');
+  const stepTitleEl = document.getElementById('stepTitle');
+  const stepSubEl = document.getElementById('stepSub');
+  const btnBack = document.getElementById('btnBack');
+  const btnNext = document.getElementById('btnNext');
+  const successEl = document.getElementById('success');
+  const formHead = document.getElementById('formHead');
+  const navRow = document.getElementById('navRow');
+
+  const TITLES = [
+    {label:'Step 01 — Who you are', title:'Tell us about <em>you</em>.', sub:"Let's start with the basics — who you are and how to reach you."},
+    {label:'Step 02 — Your business', title:'And your <em>business</em>.', sub:'Where you work and what kind of place it is.'},
+    {label:'Step 03 — What you need', title:"What you're <em>interested in</em>.", sub:'Which Desserty lines you want to see and in what volumes.'},
+    {label:'Step 04 — Confirm', title:'All <em>good</em>?', sub:'Check your details and send us the request.'}
+  ];
+
+  let current = 0;
+  const data = {};
+
+  form.querySelectorAll('[data-type="tiles"]').forEach(group=>{
+    const name = group.dataset.name;
+    group.querySelectorAll('.tile').forEach(t=>{
+      t.addEventListener('click',()=>{
+        group.querySelectorAll('.tile').forEach(x=>x.classList.remove('active'));
+        t.classList.add('active');
+        data[name] = t.dataset.value;
+        group.classList.remove('show-error');
+      });
+    });
+  });
+
+  form.querySelectorAll('.prod').forEach(p=>{
+    const cb = p.querySelector('input');
+    p.addEventListener('click',e=>{
+      if(e.target===cb) return;
+      e.preventDefault();
+      cb.checked = !cb.checked;
+      p.classList.toggle('checked',cb.checked);
+    });
+    cb.addEventListener('change',()=>p.classList.toggle('checked',cb.checked));
+  });
+
+  const volRange = document.getElementById('volRange');
+  const volVal = document.getElementById('volVal');
+  volRange.addEventListener('input',()=>{volVal.textContent = volRange.value==='500'?'500+':volRange.value;});
+
+  function validateStep(idx){
+    const stepEl = steps[idx];
+    let ok = true;
+    stepEl.querySelectorAll('[data-required]').forEach(f=>{
+      f.classList.remove('show-error');
+      const t = f.dataset.type;
+      if(t==='tiles'){
+        if(!data[f.dataset.name]){f.classList.add('show-error');ok=false;}
+      } else if(t==='prods'){
+        if(!f.querySelectorAll('input:checked').length){f.classList.add('show-error');ok=false;}
+      } else {
+        const inp = f.querySelector('input,textarea,select');
+        const val = (inp.value||'').trim();
+        let bad = !val;
+        if(!bad && f.dataset.type==='email') bad = !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+        if(bad){f.classList.add('show-error');inp.classList.add('error');ok=false;}
+        else{inp.classList.remove('error');}
+      }
+    });
+    return ok;
+  }
+
+  function collectStep(idx){
+    steps[idx].querySelectorAll('input,select,textarea').forEach(inp=>{
+      if(inp.type==='checkbox'){
+        if(inp.name.endsWith('[]')){
+          const key=inp.name.slice(0,-2);data[key]=data[key]||[];
+          if(inp.checked&&!data[key].includes(inp.value))data[key].push(inp.value);
+          if(!inp.checked)data[key]=data[key].filter(v=>v!==inp.value);
+        } else {data[inp.name]=inp.checked;}
+      } else if(inp.name){data[inp.name]=inp.value.trim();}
+    });
+  }
+
+  function go(idx){
+    if(idx<0||idx>steps.length-1) return;
+    steps[current].classList.remove('active');
+    steps[idx].classList.add('active');
+    current=idx;
+    bar.style.width=((idx+1)/steps.length*100)+'%';
+    stepNumEl.textContent=idx+1;
+    stepLabelEl.textContent=TITLES[idx].label;
+    stepTitleEl.innerHTML=TITLES[idx].title;
+    stepSubEl.textContent=TITLES[idx].sub;
+    btnBack.disabled=idx===0;
+    btnNext.innerHTML=idx===steps.length-1
+      ?'Send request <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 5h13M9 1l4 4-4 4"/></svg>'
+      :'Continue <svg width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 5h13M9 1l4 4-4 4"/></svg>';
+    if(idx===3) buildReview();
+    formHead.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+
+  function buildReview(){
+    const r=document.getElementById('reviewBox');
+    const v=data;
+    const fullName=((v.firstName||'')+' '+(v.lastName||'')).trim()||'—';
+    const products=(v.products&&v.products.length)?v.products.join(', '):'—';
+    const vol=volRange.value==='500'?'500+':volRange.value;
+    const items=[
+      {k:'Contact',v:`${fullName}<br><span style="font-weight:400;color:var(--neutral-soft);font-size:13px">${v.role||'—'} · ${v.email||'—'}${v.phone?' · '+v.phone:''}</span>`,step:0},
+      {k:'Business',v:`<b>${v.businessName||'—'}</b><br><span style="font-weight:400;color:var(--neutral-soft);font-size:13px">${v.businessType||'—'} · ${v.city||'—'}${v.province?' ('+v.province+')':''}</span>`,step:1},
+      {k:'Lines',v:products,step:2},
+      {k:'Est. volume',v:`${vol} units/month`,step:2},
+    ];
+    r.innerHTML=items.map(i=>`<div class="rrow"><dt>${i.k}</dt><dd>${i.v}</dd><button type="button" class="edit" data-go="${i.step}">edit</button></div>`).join('');
+    r.querySelectorAll('.edit').forEach(b=>{b.addEventListener('click',()=>go(parseInt(b.dataset.go,10)));});
+  }
+
+  btnBack.addEventListener('click',()=>go(current-1));
+  btnNext.addEventListener('click',()=>{
+    collectStep(current);
+    if(!validateStep(current)) return;
+    if(current===steps.length-1){
+      const privacy=document.getElementById('privacy');
+      if(!privacy.checked){document.getElementById('privacyErr').style.display='block';return;}
+      submit(); return;
+    }
+    go(current+1);
+  });
+
+  document.getElementById('privacy').addEventListener('change',()=>{document.getElementById('privacyErr').style.display='none';});
+  form.querySelectorAll('input,select,textarea').forEach(inp=>{
+    inp.addEventListener('input',()=>{const f=inp.closest('.field');if(f){f.classList.remove('show-error');inp.classList.remove('error');}});
+  });
+
+  function submit(){
+    btnNext.disabled=true;btnNext.innerHTML='Sending...';
+    const products=(data.products||[]).join(', ')||'—';
+    const message=[
+      'Role: '+(data.role||'—'),
+      'Business type: '+(data.businessType||'—'),
+      'Business name: '+(data.businessName||'—'),
+      'City: '+(data.city||'—')+(data.province?' ('+data.province+')':''),
+      'Website: '+(data.web||'—'),
+      'Products of interest: '+products,
+      'Estimated monthly volume (units): '+(data.volume||'—'),
+      'Has existing supplier: '+(data.hasSupplier||'—'),
+      'Notes: '+(data.notes||'—'),
+    ].join('\n');
+    const body=new URLSearchParams({
+      name:(data.firstName||'')+' '+(data.lastName||''),
+      email:data.email||'',
+      subject:'Partnership request',
+      message:message,
+      lang:'en'
+    });
+    fetch('../contact.php',{method:'POST',body,headers:{'Content-Type':'application/x-www-form-urlencoded'}})
+      .finally(()=>{
+        form.style.display='none';navRow.style.display='none';formHead.style.display='none';
+        successEl.classList.add('active');
+        document.getElementById('successName').textContent=data.firstName||'partner';
+        formHead.scrollIntoView({behavior:'smooth',block:'nearest'});
+      });
+  }
+
+  go(0);
+})();
+</script>
+</body>
+</html>
