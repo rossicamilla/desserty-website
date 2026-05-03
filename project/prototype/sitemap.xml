@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
@@ -20,108 +20,108 @@
 
   <!-- Dubai Chocolate -->
   <url>
-    <loc>https://www.dessertyfood.com/dubai-chocolate.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/dubai-chocolate.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/dubai-chocolate.html"/>
+    <loc>https://www.dessertyfood.com/dubai-chocolate</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/dubai-chocolate"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/dubai-chocolate"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.dessertyfood.com/en/dubai-chocolate.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/dubai-chocolate.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/dubai-chocolate.html"/>
+    <loc>https://www.dessertyfood.com/en/dubai-chocolate</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/dubai-chocolate"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/dubai-chocolate"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- OOH! -->
   <url>
-    <loc>https://www.dessertyfood.com/ooh.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/ooh.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/ooh.html"/>
+    <loc>https://www.dessertyfood.com/ooh</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/ooh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/ooh"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.dessertyfood.com/en/ooh.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/ooh.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/ooh.html"/>
+    <loc>https://www.dessertyfood.com/en/ooh</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/ooh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/ooh"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- La nostra storia / Our Story -->
   <url>
-    <loc>https://www.dessertyfood.com/storia.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/storia.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/storia.html"/>
+    <loc>https://www.dessertyfood.com/storia</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/storia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/storia"/>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.dessertyfood.com/en/storia.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/storia.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/storia.html"/>
+    <loc>https://www.dessertyfood.com/en/storia</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/storia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/storia"/>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- Diventa partner / Contact -->
   <url>
-    <loc>https://www.dessertyfood.com/diventa-partner.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/diventa-partner.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/diventa-partner.html"/>
+    <loc>https://www.dessertyfood.com/diventa-partner</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/diventa-partner"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/diventa-partner"/>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.dessertyfood.com/en/diventa-partner.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/diventa-partner.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/diventa-partner.html"/>
+    <loc>https://www.dessertyfood.com/en/diventa-partner</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/diventa-partner"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/diventa-partner"/>
     <changefreq>yearly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Legal -->
   <url>
-    <loc>https://www.dessertyfood.com/privacy.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/privacy.html"/>
+    <loc>https://www.dessertyfood.com/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/privacy"/>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.dessertyfood.com/en/privacy.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/privacy.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/privacy.html"/>
+    <loc>https://www.dessertyfood.com/en/privacy</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/privacy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/privacy"/>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.dessertyfood.com/cookies.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/cookies.html"/>
+    <loc>https://www.dessertyfood.com/cookies</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/cookies"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/cookies"/>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.dessertyfood.com/en/cookies.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/cookies.html"/>
+    <loc>https://www.dessertyfood.com/en/cookies</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/cookies"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/cookies"/>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.dessertyfood.com/termini.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/termini.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/termini.html"/>
+    <loc>https://www.dessertyfood.com/termini</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/termini"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/termini"/>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.dessertyfood.com/en/termini.html</loc>
-    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/termini.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/termini.html"/>
+    <loc>https://www.dessertyfood.com/en/termini</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.dessertyfood.com/termini"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.dessertyfood.com/en/termini"/>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

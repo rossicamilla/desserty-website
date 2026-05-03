@@ -1,6 +1,9 @@
 # Credenziali — mai committare
 project/prototype/config.php
 
+# Claude Code
+.claude/
+
 # Sistema operativo
 .DS_Store
 Thumbs.db
@@ -11,9 +14,6 @@ desktop.ini
 .idea/
 *.swp
 *.swo
-
-# Upload utente (file binari pesanti)
-project/uploads/
 
 # Log
 *.log

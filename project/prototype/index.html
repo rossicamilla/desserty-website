@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="it">
 <head>
 <meta charset="utf-8" />
@@ -15,13 +15,13 @@
 <meta property="og:title" content="Desserty — Frozen dessert per tutti i gusti">
 <meta property="og:description" content="Dubai Chocolate mochi e OOH! frutta gelata al cioccolato. Frozen dessert premium per supermercati e gelaterie italiane.">
 <meta property="og:url" content="https://www.desserty.it/">
-<meta property="og:image" content="https://www.desserty.it/assets/og-desserty.jpg">
+<meta property="og:image" content="https://www.desserty.it/Immagini/og/og-desserty.png">
 <meta property="og:locale" content="it_IT">
 <meta property="og:locale:alternate" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Desserty — Frozen dessert per tutti i gusti">
 <meta name="twitter:description" content="Dubai Chocolate mochi e OOH! frutta gelata al cioccolato. Frozen dessert premium made in Italy.">
-<meta name="twitter:image" content="https://www.desserty.it/assets/og-desserty.jpg">
+<meta name="twitter:image" content="https://www.desserty.it/Immagini/og/og-desserty.png">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.desserty.it/#org","name":"Desserty","legalName":"Confluencia Srl","url":"https://www.desserty.it","address":{"@type":"PostalAddress","streetAddress":"Via Magenta 25","addressLocality":"Seregno","addressRegion":"MB","postalCode":"20831","addressCountry":"IT"},"telephone":"+390362182119","email":"info@dessertyfood.com","sameAs":["http://www.oohfruit.com"]},{"@type":"WebSite","@id":"https://www.desserty.it/#website","url":"https://www.desserty.it","name":"Desserty","inLanguage":"it-IT","publisher":{"@id":"https://www.desserty.it/#org"}}]}
 </script>
@@ -38,6 +38,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=DM+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
 <style>
   :root{
     /* Dubai palette */
@@ -101,7 +102,7 @@
   /* ============ HERO ============ */
   .hero{
     position:relative;
-    padding:80px 40px 0;
+    padding:80px 40px 140px;
     max-width:1400px;margin:0 auto;
     text-align:center;
   }
@@ -151,11 +152,12 @@
   }
   .chooser-card.dubai{
     background:#FBF6E8;
-    border-color:#e2d9bd;
+    border-color:var(--terracotta);
   }
   .chooser-card.ooh{
     background:var(--ooh-lavender, #E8DFFC);
-    border-color:#cabfe8;
+    border:3px solid var(--ooh-ink);
+    box-shadow:6px 6px 0 var(--ooh-ink);
     border-radius: 38% 62% 45% 55% / 52% 48% 52% 48%;
   }
   .chooser-card:hover{
@@ -171,7 +173,7 @@
   .chooser-card .name{font-size:80px;letter-spacing:-0.02em;line-height:.95;text-align:center}
   .chooser-card.dubai .name{font-family:'Cormorant Garamond',serif;font-weight:400;font-style:italic}
   .chooser-card.ooh .name{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;text-transform:uppercase;letter-spacing:0;color:var(--ooh-pink)}
-  .chooser-card .arrow{font-family:'Inter',sans-serif;font-size:24px;display:flex;align-items:center;gap:12px;font-weight:500}
+  .chooser-card .arrow{font-family:'Inter',sans-serif;font-size:16px;display:flex;align-items:center;justify-content:center;gap:10px;font-weight:500;flex-wrap:wrap;text-align:center;max-width:260px}
   .chooser-card:hover .arrow svg{transform:translateX(6px)}
   .chooser-card .arrow svg{transition:transform .3s ease}
 
@@ -617,29 +619,6 @@
     transform:rotate(-10deg);
   }
 
-  /* ============ FOOTER ============ */
-  .footer{
-    background:#2A2418;color:#f6f6f6;
-    padding:80px 40px 40px;
-    font-family:'Inter',sans-serif;
-    position:relative;
-    border-top:3px solid #2A2418;
-  }
-  .footer-inner{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px}
-  .footer .logo{color:#fff}
-  .footer h5{
-    font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#999;margin-bottom:18px;
-  }
-  .footer ul{list-style:none;display:flex;flex-direction:column;gap:10px;font-size:14px}
-  .footer ul a:hover{color:var(--terracotta)}
-  .footer .blurb{font-size:14px;line-height:1.6;color:#bbb;max-width:340px;margin-top:18px}
-  .footer-socials{margin-top:24px;display:flex;gap:8px;flex-wrap:wrap}
-  .footer-socials a{padding:8px 16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:100px;font-size:12px;letter-spacing:.05em;color:#ddd;text-decoration:none;transition:background .15s,border-color .15s}
-  .footer-socials a:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);color:#fff}
-  .footer-bottom{
-    margin-top:60px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);
-    display:flex;justify-content:space-between;font-size:12px;color:#888;
-  }
 
   /* ===== HAMBURGER ===== */
   .nav-hamburger{
@@ -732,6 +711,7 @@
     .stick-card h4{font-size:30px}
     .transition .stamp{font-size:30px;padding:14px 26px}
   }
+
 </style>
 </head>
 <body>
@@ -745,201 +725,41 @@
     per tutti <span class="accent">i&nbsp;gusti</span>.
   </h1>
   <p class="hero-sub">
-    Due mondi, una passione. Dalla pasticceria mediorientale più ricercata al gusto pop dei tuoi pomeriggi d'estate. Scegli il tuo viaggio.
+    Scopri i nostri prodotti e trova quello che fa per te.
   </p>
 
   <div class="chooser">
-    <a class="chooser-card dubai" href="dubai-chocolate.html">
+    <a class="chooser-card dubai" href="dubai-chocolate">
       <div class="name">Dubai<br/>Chocolate</div>
       <div class="arrow">
-        L'originale, davvero
+        Cioccolato, pistacchio e pasta kataifi in un solo morso
         <svg width="22" height="10" viewBox="0 0 22 10" fill="none" stroke="currentColor"><path d="M0 5h20M16 1l4 4-4 4" stroke-width="1.2"/></svg>
       </div>
     </a>
     <div class="divider"></div>
-    <a class="chooser-card ooh" href="ooh.html">
+    <a class="chooser-card ooh" href="ooh">
       <div class="name">OOH!</div>
       <div class="arrow">
-        Frutta che fa OOH!
+        La nostra frutta frozen in super trend
         <svg width="22" height="10" viewBox="0 0 22 10" fill="none" stroke="currentColor"><path d="M0 5h20M16 1l4 4-4 4" stroke-width="1.2"/></svg>
       </div>
     </a>
   </div>
 </section>
 
-<!-- ============ DUBAI CHOCOLATE ============ -->
-<section class="dubai" id="dubai" data-screen-label="Dubai Chocolate">
-  <div class="dubai-wrap">
-
-    <h1 class="dubai-headline">
-      Il <em>virale</em> Dubai Chocolate<br />
-      in un altro <span class="pist">formato</span>,<br />
-      con pistacchio<br />
-      e <em>kataifi</em> croccante.
-    </h1>
-
-    <div class="dubai-grid">
-      <div class="dubai-product">
-        <div class="badge">Premium<br/>Quality</div>
-        <img src="assets/dubai-chocolate.png" alt="Dubai Chocolate Dessert — barattolo" />
-        <svg class="corner-illus" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.2">
-          <path d="M20 50c0-18 14-32 30-32s30 14 30 32"/>
-          <path d="M30 50c8-2 16-2 22 0M30 60c8-2 16-2 22 0M30 70c8-2 16-2 22 0"/>
-        </svg>
-      </div>
-      <div class="dubai-copy">
-        <div class="dubai-tag">&nbsp;</div>
-        <h2 style="margin-top:18px">Pistacchio e <em>kataifi</em>, sotto un velo di cioccolato.</h2>
-        <p>Pistacchio e pasta kataifi, ricoperti di una sottilissima sfoglia di pasta di riso e cioccolato. Un dessert nato per essere conservato a -18° e gustato lentamente, come si fa con le cose belle.</p>
-
-      </div>
-    </div>
-
-    <!-- formats -->
-    <div class="formats">
-      <a class="format-card barattolo" href="dubai-chocolate.html" style="text-decoration:none;color:inherit;display:block">
-        <div class="pill">6 × 20 g | 120 g</div>
-        <div class="kind">Formato — barattolo</div>
-        <h3>Per quando hai tanta voglia di concederti <em>dolcezza</em>.</h3>
-        <p>Il formato da condividere o da tenere solo per te. 6 pezzi di puro piacere.</p>
-        <div class="visual">
-          <img src="assets/dubai-chocolate.png" alt="Barattolo Dubai Chocolate" />
-        </div>
-      </a>
-      <a class="format-card flowpack" href="dubai-chocolate.html" style="text-decoration:none;color:inherit;display:block">
-        <div class="pill">1 × 40 g</div>
-        <div class="kind">Formato — flowpack mini</div>
-        <h3>Per i momenti<br/><em>veloci</em>.</h3>
-        <p>Due monoporzioni da gustare ovunque vuoi.</p>
-        <div class="visual">
-          <img src="assets/dubai-flowpack.png" alt="Dubai Chocolate Dessert — flowpack monoporzione" />
-        </div>
-      </a>
-    </div>
-
-    <!-- story strip -->
-
-  </div>
-</section>
-
-<!-- ============ TRANSITION ============ -->
-<div class="transition">
-  <div class="stamp">E adesso, cambio mood</div>
-</div>
-
-<!-- ============ MARQUEE ============ -->
-<div class="marquee">
-  <div class="marquee-track">
-    <span>OOH! che gusto<span class="dot"></span>FRESH FROZEN POPS<span class="dot"></span>FRUTTA · CIOCCOLATO · STICKS<span class="dot"></span>OOH! che gusto<span class="dot"></span>FRESH FROZEN POPS<span class="dot"></span>FRUTTA · CIOCCOLATO · STICKS<span class="dot"></span></span>
-    <span aria-hidden="true">OOH! che gusto<span class="dot"></span>FRESH FROZEN POPS<span class="dot"></span>FRUTTA · CIOCCOLATO · STICKS<span class="dot"></span>OOH! che gusto<span class="dot"></span>FRESH FROZEN POPS<span class="dot"></span>FRUTTA · CIOCCOLATO · STICKS<span class="dot"></span></span>
-  </div>
-</div>
-
-<!-- ============ OOH ============ -->
-<section class="ooh" id="ooh" data-screen-label="OOH">
-  <div class="ooh-hero">
-    <div>
-      <h2>
-        <span class="ooh-mark">OOH!</span><br />
-        <span class="outlined">FROZEN</span><br />
-        <span>FUN PER<br/>tutti<span class="pink">.</span></span>
-      </h2>
-      <p>Stick di frutta e barattoli colorati per zero noia. Per il pomeriggio in spiaggia, la pausa pranzo, il dopocena con gli amici.</p>
-      <div class="cta-row">
-        <a class="btn-ooh" href="#">Tutti i gusti →</a>
-      </div>
-    </div>
-    <div class="ooh-hero-visual">
-      <div class="blob"></div>
-      <div class="blob b2"></div>
-      <div class="sticker s1">Sembra<br/>vera frutta!</div>
-      <img class="product" src="assets/ooh-peach.png" alt="OOH Peach Stick" />
-      <div class="sticker s2">Ricetta<br/>vegan</div>
-    </div>
-  </div>
-
-  <!-- sticks -->
-  <section class="sticks">
-    <div class="sticks-head">
-      <h3>Mini sticks.<br/><span class="y">Maxi gusto.</span></h3>
-      <p class="lede">Una capsula trasparente che mostra cosa stai per mangiare, cioè un buonissimo sorbetto vegan. Niente sorprese, solo OOH!</p>
-    </div>
-    <div class="sticks-grid">
-      <article class="stick-card">
-        <div class="img-wrap"><img src="assets/ooh-strawberry.png" alt="" /></div>
-        <h4>Strawberry<br/>stick</h4>
-        <div class="meta">&nbsp;</div>
-      </article>
-      <article class="stick-card">
-        <div class="img-wrap"><img src="assets/ooh-lemon.png" alt="" /></div>
-        <h4>Lemon<br/>stick</h4>
-        <div class="meta">&nbsp;</div>
-      </article>
-      <article class="stick-card">
-        <div class="img-wrap"><img src="assets/ooh-peach.png" alt="" /></div>
-        <h4>Peach<br/>stick</h4>
-        <div class="meta">&nbsp;</div>
-      </article>
-      <article class="stick-card">
-        <div class="img-wrap"><img src="assets/ooh-mango.png" alt="" /></div>
-        <h4>Mango<br/>stick</h4>
-        <div class="meta">&nbsp;</div>
-      </article>
-    </div>
-  </section>
-
-  <!-- pots -->
-  <section class="pots">
-    <div class="pots-wrap">
-      <div class="pots-head">
-        <h3>I barattoli <span class="pink">che ti faranno</span><br/>"OOH!" davvero.</h3>
-        <p class="lede">Frutta intera ricoperta di cioccolato bianco e al latte. La cosa migliore che puoi tenere nel freezer, secondo noi.</p>
-      </div>
-
-      <div class="pots-grid">
-        <a class="pot-card fragole" href="ooh.html">
-          <div class="corner-sticker">New<br/>flavor</div>
-          <div>
-            <h4>OOH!<br/>Fragole</h4>
-            <p class="desc">Fragole baby intere, ricoperte di cioccolato bianco e al latte. 12 pezzi per barattolo,.</p>
-            <div class="tags">
-              <span class="tag">Cioccolato bianco e al latte</span>
-              <span class="tag">150g</span>
-              <span class="tag">80g</span>
-            </div>
-          </div>
-          <div class="visual"><img src="assets/ooh-fragole.png" alt="OOH! Fragole" /></div>
-        </a>
-        <a class="pot-card lamponi" href="ooh.html" style="background-color: rgb(204, 85, 231)">
-          <div class="corner-sticker">Best<br/>seller</div>
-          <div>
-            <h4>OOH!<br/>Lamponi</h4>
-            <p class="desc">Lamponi interi, freschi, ghiacciati e tuffati nel cioccolato. Acidità che incontra dolcezza in due tempi: croc, poi ahhh.</p>
-            <div class="tags">
-              <span class="tag">Cioccolato bianco e al latte</span>
-              <span class="tag">150g</span>
-              <span class="tag">80g</span>
-            </div>
-          </div>
-          <div class="visual"><img src="assets/ooh-lamponi.png" alt="OOH! Lamponi" /></div>
-        </a>
-      </div>
-    </div>
-  </section>
-</section>
 
 <!-- B2B / PARTNER -->
-<section class="b2b-cta" style="background:#EDE6CF;color:var(--ink);position:relative;overflow:hidden">
+<section class="b2b-cta" style="background:#EDE6CF;color:var(--ink);position:relative;overflow:hidden;margin:0">
   <div style="max-width:1200px;margin:0 auto;position:relative;z-index:2">
 
     <div style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:28px">Diventa partner</div>
 
-    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(48px,7vw,96px);line-height:.98;letter-spacing:-0.02em;max-width:1000px">
-      Vuoi i prodotti <em style="font-style:italic;color:var(--terracotta);font-weight:400">Desserty</em><br/>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(48px,7vw,96px);line-height:1.15;letter-spacing:-0.02em;max-width:1000px">
+      Vuoi <em style="font-style:italic;color:var(--terracotta);font-weight:400">Desserty</em><br/>
       sui tuoi scaffali?
     </h2>
 
-    <div class="b2b-grid" style="max-width:1100px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:72px;max-width:1100px">
       <div style="background:#fff;border-radius:12px;padding:40px;border:1px solid rgba(42,36,24,.1)">
         <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:32px;color:var(--ink);margin-bottom:16px">Sei un supermercato?</div>
         <p style="font-family:'Inter',sans-serif;font-weight:300;font-size:16px;line-height:1.65;color:var(--ink-soft)">Inserisci Dubai Chocolate, gli stick OOH! e i barattoli OOH! nel tuo banco frigo. Margini chiari, rotazione veloce, materiale espositivo incluso.</p>
@@ -950,7 +770,7 @@
       </div>
     </div>
 
-    <div style="margin-top:56px;display:flex;gap:18px;flex-wrap:wrap;align-items:center;justify-content:center">
+    <div style="margin-top:56px;display:flex;gap:18px;flex-wrap:wrap;align-items:center">
       <a href="diventa-partner.html" style="display:inline-flex;align-items:center;gap:12px;background:var(--terracotta);color:#fff;font-family:'Inter',sans-serif;font-weight:500;font-size:15px;letter-spacing:.04em;padding:18px 30px;border-radius:100px;text-decoration:none">
         Diventa partner →
       </a>
@@ -959,7 +779,6 @@
       </a>
     </div>
   </div>
-
 </section>
 
 <div data-mount="footer"></div>

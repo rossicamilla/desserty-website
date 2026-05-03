@@ -1,19 +1,20 @@
 // Tiny helper: inject reused HTML chunks (nav/footer) and mark active link
 (function(){
   const PAGES = {
-    'index.html':'home',
-    'dubai-chocolate.html':'dubai',
-    'ooh.html':'ooh',
-    'storia.html':'storia',
-    'diventa-partner.html':'contatti',
+    '':'home',
+    'dubai-chocolate':'dubai',
+    'ooh':'ooh',
+    'storia':'storia',
+    'diventa-partner':'contatti',
   };
-  const here = (location.pathname.split('/').pop() || 'index.html');
+  // Normalize: strip .html so slug matching works both locally (file://) and on server (clean URLs)
+  const here = (location.pathname.split('/').pop() || '').replace(/\.html$/, '');
   const key = PAGES[here] || '';
 
   const navHTML = `
   <header class="nav">
     <div class="nav-inner">
-      <a class="logo" href="index.html"><b>D</b>esserty<span class="dot">.</span></a>
+      <a class="logo" href="./"><img src="Immagini/og/logo-arancio.png" alt="Desserty" style="height:72px;width:auto;display:block"/></a>
       <nav class="nav-links">
         <a href="dubai-chocolate.html" data-key="dubai">Dubai Chocolate</a>
         <a href="ooh.html" data-key="ooh">OOH!</a>
@@ -22,7 +23,7 @@
       </nav>
       <div class="nav-cta">
         <span class="lang active">IT</span>
-        <a class="lang" href="en/${here}" style="color:inherit;text-decoration:none">EN</a>
+        <a class="lang" href="en/${here || 'index'}.html" style="color:inherit;text-decoration:none">EN</a>
       </div>
       <button class="nav-hamburger" aria-label="Apri menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -36,20 +37,29 @@
       <div class="nav-mobile-lang">
         <span class="lang active">IT</span>
         <span class="sep">·</span>
-        <a class="lang" href="en/${here}">EN</a>
+        <a class="lang" href="en/${here || 'index'}.html">EN</a>
       </div>
     </nav>
   </header>`;
 
   const footerHTML = `
   <footer class="footer">
-    <div class="footer-inner">
+    <div class="ooh-band" style="margin:-80px -40px 0;padding-left:0;padding-right:0">
+      <div style="max-width:1480px;margin:0 auto;padding:0 40px;box-sizing:border-box;width:100%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+        <div class="ooh-band-text">
+          Visita anche il sito<br/><span style="color:var(--ooh-pink)">dedicato a OOH!</span>
+        </div>
+        <a href="http://www.oohfruit.com" target="_blank" class="ooh-band-link">
+          www.oohfruit.com ↗
+        </a>
+      </div>
+    </div>
+    <div class="footer-inner" style="margin-top:60px">
       <div>
-        <a class="logo" href="index.html"><b>D</b>esserty<span class="dot" style="color:var(--terracotta)">.</span></a>
+        <a class="logo" href="./"><img src="Immagini/og/logo-arancio.png" alt="Desserty" style="height:72px;width:auto;display:block"/></a>
         <p class="blurb">Frozen dessert per tutti i gusti. Le innovazioni dei dessert del mondo, portate in Italia.</p>
         <div class="footer-socials">
-          <a href="https://www.linkedin.com/in/desserty" target="_blank" aria-label="LinkedIn">LinkedIn ↗</a>
-          <a href="http://www.oohfruit.com" target="_blank" aria-label="OOH! Fruit">oohfruit.com ↗</a>
+          <a href="https://www.linkedin.com/showcase/dessertyfood/" target="_blank" aria-label="LinkedIn">LinkedIn ↗</a>
         </div>
       </div>
       <div>
@@ -83,26 +93,12 @@
     </div>
   </footer>`;
 
-  const oohBannerHTML = `
-  <div class="ooh-band">
-    <div class="ooh-band-text">
-      Visita anche il sito<br/><span style="color:var(--ooh-pink)">dedicato a OOH!</span>
-    </div>
-    <a href="http://www.oohfruit.com" target="_blank" class="ooh-band-link">
-      www.oohfruit.com ↗
-    </a>
-  </div>`;
-
   function mount(){
     const navSlot = document.querySelector('[data-mount="nav"]');
     const footSlot = document.querySelector('[data-mount="footer"]');
     if(navSlot) navSlot.innerHTML = navHTML;
-    if(footSlot){
-      if(here !== 'ooh.html'){
-        footSlot.insertAdjacentHTML('beforebegin', oohBannerHTML);
-      }
-      footSlot.innerHTML = footerHTML;
-    }
+    if(footSlot) footSlot.innerHTML = footerHTML;
+    if(key === 'ooh'){const band=footSlot.querySelector('.ooh-band');if(band)band.style.display='none';}
     document.querySelectorAll('.nav-links a').forEach(a=>{
       if(a.dataset.key === key) a.classList.add('active');
     });
@@ -112,11 +108,9 @@
         el.classList.add('active');
       });
     });
-    // mobile menu active links
     document.querySelectorAll('.nav-mobile-menu [data-key]').forEach(a=>{
       if(a.dataset.key===key) a.classList.add('active');
     });
-    // hamburger toggle
     const hamburger=document.querySelector('.nav-hamburger');
     const mobileMenu=document.querySelector('.nav-mobile-menu');
     if(hamburger&&mobileMenu){
@@ -136,16 +130,13 @@
     document.querySelectorAll('.marquee-track').forEach(track=>{
       const original = track.querySelector('span:not([aria-hidden])');
       if(!original) return;
-      // remove all aria-hidden clones
       track.querySelectorAll('[aria-hidden]').forEach(el=>el.remove());
-      // clone until track is wider than 3x viewport
       let safety = 0;
       while(track.scrollWidth < window.innerWidth * 3 && safety++ < 20){
         const clone = original.cloneNode(true);
         clone.setAttribute('aria-hidden','true');
         track.appendChild(clone);
       }
-      // set animation to scroll by the width of one original span
       const spanW = original.offsetWidth;
       const gap = parseInt(getComputedStyle(track).gap) || 48;
       const unit = spanW + gap;
@@ -153,6 +144,14 @@
     });
   }
 
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',()=>{mount();fixMarquees();});
-  else { mount(); fixMarquees(); }
+  function injectFavicon(){
+    if(!document.querySelector('link[rel="icon"]')){
+      const lnk=document.createElement('link');
+      lnk.rel='icon';lnk.type='image/png';
+      lnk.href='Immagini/og/favicon-orange.png';
+      document.head.appendChild(lnk);
+    }
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',()=>{mount();fixMarquees();injectFavicon();});
+  else { mount(); fixMarquees(); injectFavicon(); }
 })();

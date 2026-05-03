@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="it">
 <head>
 <meta charset="utf-8" />
@@ -6,23 +6,23 @@
 <title>OOH! Sticks &amp; Barattoli Gelati — Desserty</title>
 <meta name="description" content="OOH! è frutta intera ricoperta di cioccolato bianco e al latte. Sticks gelati e barattoli da freezer nelle varietà fragole e lamponi. Un prodotto Desserty per supermercati e gelaterie.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.desserty.it/ooh.html">
-<link rel="alternate" hreflang="it" href="https://www.desserty.it/ooh.html">
-<link rel="alternate" hreflang="en" href="https://www.desserty.it/en/ooh.html">
-<link rel="alternate" hreflang="x-default" href="https://www.desserty.it/ooh.html">
+<link rel="canonical" href="https://www.desserty.it/ooh">
+<link rel="alternate" hreflang="it" href="https://www.desserty.it/ooh">
+<link rel="alternate" hreflang="en" href="https://www.desserty.it/en/ooh">
+<link rel="alternate" hreflang="x-default" href="https://www.desserty.it/ooh">
 <meta property="og:type" content="product">
 <meta property="og:site_name" content="Desserty">
 <meta property="og:title" content="OOH! Sticks &amp; Barattoli Gelati — Desserty">
 <meta property="og:description" content="Frutta intera ricoperta di cioccolato bianco e al latte. Sticks e barattoli da freezer: fragole e lamponi.">
-<meta property="og:url" content="https://www.desserty.it/ooh.html">
-<meta property="og:image" content="https://www.desserty.it/assets/og-ooh.jpg">
+<meta property="og:url" content="https://www.desserty.it/ooh">
+<meta property="og:image" content="https://www.desserty.it/Immagini/og/og-ooh.png">
 <meta property="og:locale" content="it_IT">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="OOH! Sticks &amp; Barattoli Gelati — Desserty">
 <meta name="twitter:description" content="Frutta intera ricoperta di cioccolato bianco e al latte. Sticks e barattoli da freezer: fragole e lamponi.">
-<meta name="twitter:image" content="https://www.desserty.it/assets/og-ooh.jpg">
+<meta name="twitter:image" content="https://www.desserty.it/Immagini/og/og-ooh.png">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.desserty.it/"},{"@type":"ListItem","position":2,"name":"OOH!","item":"https://www.desserty.it/ooh.html"}]},{"@type":"Product","name":"OOH! Sticks & Barattoli Gelati","description":"Frutta intera ricoperta di cioccolato bianco e al latte, in sticks gelati e barattoli da freezer.","brand":{"@type":"Brand","name":"Desserty"},"offers":{"@type":"Offer","availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":"Confluencia Srl","url":"https://www.desserty.it"}}}]}
+{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.desserty.it/"},{"@type":"ListItem","position":2,"name":"OOH!","item":"https://www.desserty.it/ooh"}]},{"@type":"Product","name":"OOH! Sticks & Barattoli Gelati","description":"Frutta intera ricoperta di cioccolato bianco e al latte, in sticks gelati e barattoli da freezer.","brand":{"@type":"Brand","name":"Desserty"},"offers":{"@type":"Offer","availability":"https://schema.org/InStock","seller":{"@type":"Organization","name":"Confluencia Srl","url":"https://www.desserty.it"}}}]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -89,7 +89,7 @@
     font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:italic;
     font-size:13px;letter-spacing:.18em;text-transform:uppercase;padding:5px 12px;border-radius:100px;align-self:flex-start;
   }
-  .card .img-wrap{margin:14px -6px 8px;aspect-ratio:1;display:grid;place-items:center;background:transparent;overflow:hidden}
+  .card .img-wrap{margin:14px -6px 8px;aspect-ratio:1;display:grid;place-items:center;background:transparent}
   .card .img-wrap img{max-width:88%;max-height:88%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 10px 12px rgba(0,0,0,.12))}
   .card h3{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;font-size:34px;text-transform:uppercase;line-height:.9;text-align:center}
   .card.compact h3{font-size:26px}
@@ -114,8 +114,19 @@
   .spotlight .visual{
     aspect-ratio:1;background:var(--ooh-yellow);border:3px solid var(--ooh-ink);border-radius:50%;
     display:grid;place-items:center;box-shadow:10px 10px 0 var(--ooh-ink);
+    position:relative;overflow:visible;
   }
-  .spotlight .visual img{width:78%;filter:drop-shadow(0 30px 30px rgba(0,0,0,.25))}
+  .spotlight .visual img{width:64%;filter:drop-shadow(0 30px 30px rgba(0,0,0,.25))}
+  .spotlight .visual .sticker{
+    position:absolute;
+    background:var(--ooh-yellow);border:3px solid var(--ooh-ink);border-radius:50%;
+    width:110px;height:110px;display:grid;place-items:center;text-align:center;
+    font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;
+    text-transform:uppercase;font-size:16px;line-height:1.05;color:var(--ooh-ink);
+    z-index:3;
+  }
+  .spotlight .visual .sticker.s1{top:30px;left:-10px;transform:rotate(12deg);background:#9b6dd6;color:#fff}
+  .spotlight .visual .sticker.s2{bottom:30px;left:30px;background:var(--ooh-pink);color:#fff;transform:rotate(-8deg);font-size:14px;width:110px;height:110px}
 
   /* big pot cards (replicate index) */
   .pots-section{max-width:1500px;margin:0 auto;padding:150px 40px 120px}
@@ -138,8 +149,8 @@
 
   /* lavender section wrapper from barattoli onwards */
   .lavender-zone{background:var(--ooh-lavender);position:relative}
-  .lavender-zone .ooh-hero{padding:80px 40px 40px}
-  .lavender-zone .pots-section{padding:60px 40px 40px}
+  .lavender-zone .ooh-hero{padding:80px 40px 16px}
+  .lavender-zone .pots-section{padding:20px 40px 40px}
 
   /* HOW IT WORKS */
   .how{background:var(--ooh-pink);color:#fff;border-top:3px solid var(--ooh-ink);border-bottom:3px solid var(--ooh-ink);padding:100px 40px}
@@ -151,6 +162,7 @@
   .how-step .num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;font-size:64px;line-height:1;color:var(--ooh-pink)}
   .how-step h3{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;font-size:32px;text-transform:uppercase;line-height:.9;margin-top:8px}
   .how-step p{margin-top:10px;font-size:15px;line-height:1.5;font-weight:500}
+  .footer .ooh-band{display:none!important}
 
   @media(max-width:1000px){
     .grid{grid-template-columns:repeat(2,1fr)}
@@ -209,10 +221,10 @@
 </section>
 
 <section class="grid" style="grid-template-columns:repeat(4,1fr)">
-  <a class="card compact" href="#"><div class="img-wrap"><img src="assets/ooh-strawberry.png"></div><h3>Strawberry stick</h3></a>
-  <a class="card compact" href="#"><div class="img-wrap"><img src="assets/ooh-lemon.png"></div><h3>Lemon stick</h3></a>
-  <a class="card compact" href="#"><div class="img-wrap"><img src="assets/ooh-peach.png"></div><h3>Peach stick</h3></a>
-  <a class="card compact" href="#"><div class="img-wrap"><img src="assets/ooh-mango.png"></div><h3>Mango stick</h3></a>
+  <a class="card compact" href="http://www.oohfruit.com" target="_blank"><div class="img-wrap"><img src="Immagini/ooh-strawberry.png"></div><h3>Strawberry stick</h3></a>
+  <a class="card compact" href="http://www.oohfruit.com" target="_blank"><div class="img-wrap"><img src="Immagini/ooh-lemon.png"></div><h3>Lemon stick</h3></a>
+  <a class="card compact" href="http://www.oohfruit.com" target="_blank"><div class="img-wrap"><img src="Immagini/ooh-peach.png"></div><h3>Peach stick</h3></a>
+  <a class="card compact" href="http://www.oohfruit.com" target="_blank"><div class="img-wrap"><img src="Immagini/ooh-mango.png"></div><h3>Mango stick</h3></a>
 </section>
 
 <section class="spotlight">
@@ -224,10 +236,14 @@
         <div><span class="b">1</span><span>Trovali al supermercato.</span></div>
         <div><span class="b">2</span><span>Fai una foto prima di morderli.</span></div>
         <div><span class="b">3</span><span>Fai una foto dopo che li hai morsi.</span></div>
-        <div><span class="b">4</span><span>Tagga <strong>@oohfruit</strong> su TikTok!</span></div>
+        <div><span class="b">4</span><span>Tagga <a href="https://www.tiktok.com/@oohfruit" target="_blank" style="color:inherit;font-weight:700;text-decoration:underline">@oohfruit</a> su TikTok!</span></div>
       </div>
     </div>
-    <div class="visual"><img src="assets/ooh-strawberry.png" alt=""></div>
+    <div class="visual">
+      <div class="sticker s1">Sembra<br/>vera frutta!</div>
+      <img src="Immagini/ooh-peach.png" alt="">
+      <div class="sticker s2">Vegan<br/>recipe</div>
+    </div>
   </div>
 </section>
 
@@ -247,39 +263,39 @@
 
 <section class="pots-section">
   <div class="pots-grid">
-    <a class="pot-card fragole" href="#">
+    <a class="pot-card fragole" href="http://www.oohfruit.com" target="_blank">
       <div class="corner-sticker">New<br/>flavor</div>
       <div>
         <h4>OOH!<br/>Fragole</h4>
         <p class="desc">Fragole baby intere, ricoperte di cioccolato bianco e al latte. 12 pezzi per barattolo, di cui solo 3 ti basteranno.</p>
-        <div class="tags"><span class="tag">Cioccolato bianco</span><span class="tag">Frutta intera</span><span class="tag">150g</span></div>
+        <div class="tags"><span class="tag">Cioccolato bianco</span><span class="tag">Cioccolato al latte</span><span class="tag">Frutta intera</span><span class="tag">150g</span></div>
       </div>
-      <div class="visual"><img src="assets/ooh-fragole.png" alt="OOH! Fragole" /></div>
+      <div class="visual"><img src="Immagini/ooh-fragole.png" alt="OOH! Fragole" /></div>
     </a>
-    <a class="pot-card lamponi" href="#">
+    <a class="pot-card lamponi" href="http://www.oohfruit.com" target="_blank">
       <div class="corner-sticker">Best<br/>seller</div>
       <div>
         <h4>OOH!<br/>Lamponi</h4>
         <p class="desc">Lamponi interi, freschi, ghiacciati e tuffati nel cioccolato. Acidità incontra dolcezza in due tempi: croc, poi ahhh.</p>
-        <div class="tags"><span class="tag">Cioccolato al latte</span><span class="tag">Frutta intera</span><span class="tag">150g</span></div>
+        <div class="tags"><span class="tag">Cioccolato bianco</span><span class="tag">Cioccolato al latte</span><span class="tag">Frutta intera</span><span class="tag">150g</span></div>
       </div>
-      <div class="visual"><img src="assets/ooh-lamponi.png" alt="OOH! Lamponi" /></div>
+      <div class="visual"><img src="Immagini/ooh-lamponi.png" alt="OOH! Lamponi" /></div>
     </a>
-    <a class="pot-card fragolemini" href="#">
+    <a class="pot-card fragolemini" href="http://www.oohfruit.com" target="_blank">
       <div>
         <h4>OOH!<br/>Fragole<br/>mini</h4>
         <p class="desc">Versione monoporzione del nostro best-seller. Per chi non vuole condividere, e va bene così.</p>
-        <div class="tags"><span class="tag">80g</span></div>
+        <div class="tags"><span class="tag">Cioccolato bianco</span><span class="tag">Cioccolato al latte</span><span class="tag">Frutta intera</span><span class="tag">80g</span></div>
       </div>
-      <div class="visual"><img src="assets/ooh-fragole-80.png" style="transform:rotate(-8deg)" alt="OOH! Fragole Mini" /></div>
+      <div class="visual"><img src="Immagini/ooh-fragole-80.png" style="transform:rotate(-8deg)" alt="OOH! Fragole Mini" /></div>
     </a>
-    <a class="pot-card lamponimini" href="#">
+    <a class="pot-card lamponimini" href="http://www.oohfruit.com" target="_blank">
       <div>
         <h4>OOH!<br/>Lamponi<br/>mini</h4>
         <p class="desc">Stesso lampone, formato tascabile. Perfetto per la pausa pranzo da freezer ufficio.</p>
-        <div class="tags"><span class="tag">80g</span></div>
+        <div class="tags"><span class="tag">Cioccolato bianco</span><span class="tag">Cioccolato al latte</span><span class="tag">Frutta intera</span><span class="tag">80g</span></div>
       </div>
-      <div class="visual"><img src="assets/ooh-lamponi-80.png" style="transform:rotate(8deg)" alt="OOH! Lamponi Mini" /></div>
+      <div class="visual"><img src="Immagini/ooh-lamponi-80.png" style="transform:rotate(8deg)" alt="OOH! Lamponi Mini" /></div>
     </a>
   </div>
 </section>
@@ -295,15 +311,6 @@
   </div>
 </section>
 
-
-<div class="ooh-band">
-  <div class="ooh-band-text">
-    Visita anche il sito<br/><span style="color:var(--ooh-pink)">dedicato a OOH!</span>
-  </div>
-  <a href="http://www.oohfruit.com" target="_blank" class="ooh-band-link">
-    www.oohfruit.com ↗
-  </a>
-</div>
 
 </div>
 

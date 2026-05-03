@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
@@ -15,19 +15,20 @@
 <meta property="og:title" content="Desserty — Frozen Desserts for Every Mood">
 <meta property="og:description" content="Dubai Chocolate mochi and OOH! chocolate-coated frozen fruit. Premium frozen desserts for supermarkets and gelaterias.">
 <meta property="og:url" content="https://www.desserty.it/en/">
-<meta property="og:image" content="https://www.desserty.it/assets/og-desserty.jpg">
+<meta property="og:image" content="https://www.desserty.it/Immagini/og/og-desserty.png">
 <meta property="og:locale" content="en_GB">
 <meta property="og:locale:alternate" content="it_IT">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Desserty — Frozen Desserts for Every Mood">
 <meta name="twitter:description" content="Dubai Chocolate mochi and OOH! chocolate-coated frozen fruit. Premium frozen desserts made in Italy.">
-<meta name="twitter:image" content="https://www.desserty.it/assets/og-desserty.jpg">
+<meta name="twitter:image" content="https://www.desserty.it/Immagini/og/og-desserty.png">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.desserty.it/#org","name":"Desserty","legalName":"Confluencia Srl","url":"https://www.desserty.it","address":{"@type":"PostalAddress","streetAddress":"Via Magenta 25","addressLocality":"Seregno","addressRegion":"MB","postalCode":"20831","addressCountry":"IT"},"telephone":"+390362182119","email":"info@dessertyfood.com"},{"@type":"WebSite","@id":"https://www.desserty.it/#website","url":"https://www.desserty.it","name":"Desserty","inLanguage":"en-GB","publisher":{"@id":"https://www.desserty.it/#org"}}]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=DM+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared.css">
 <style>
   :root{
     --cream:#EDE6CF;--cream-deep:#E2D9BC;--terracotta:#F97C46;--pistachio:#B7BA70;--ink:#2A2418;--ink-soft:#4d4534;
@@ -51,7 +52,7 @@
   .nav-cta .lang{opacity:.55}
   .nav-cta .lang.active{opacity:1;font-weight:600}
 
-  .hero{position:relative;padding:80px 40px 0;max-width:1400px;margin:0 auto;text-align:center}
+  .hero{position:relative;padding:80px 40px 140px;max-width:1400px;margin:0 auto;text-align:center}
   .eyebrow{font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--ink-soft)}
   .hero h1{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:clamp(56px,9vw,132px);line-height:.95;letter-spacing:-0.03em;margin-top:8px;color:var(--ink)}
   .hero h1 em{font-style:italic;font-weight:400;color:var(--ink)}
@@ -61,8 +62,8 @@
   .chooser{margin:64px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:stretch;max-width:1100px}
   .chooser .divider{display:none}
   .chooser-card{position:relative;padding:80px 40px;min-height:340px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;transition:background .4s ease,transform .4s ease,border-radius .6s ease;cursor:pointer;border:1px solid #d9d4c5;background:#fff;text-decoration:none;overflow:hidden;border-radius:62% 38% 55% 45% / 48% 52% 48% 52%}
-  .chooser-card.dubai{background:#FBF6E8;border-color:#e2d9bd}
-  .chooser-card.ooh{background:var(--ooh-lavender,#E8DFFC);border-color:#cabfe8;border-radius:38% 62% 45% 55% / 52% 48% 52% 48%}
+  .chooser-card.dubai{background:#FBF6E8;border-color:var(--terracotta)}
+  .chooser-card.ooh{background:var(--ooh-lavender,#E8DFFC);border:3px solid var(--ooh-ink);box-shadow:6px 6px 0 var(--ooh-ink);border-radius:38% 62% 45% 55% / 52% 48% 52% 48%}
   .chooser-card:hover{transform:translateY(-4px);border-radius:50% 50% 50% 50% / 50% 50% 50% 50%}
   .chooser-card.dubai:hover{background:#F6EFD8}
   .chooser-card.ooh:hover{background:#DDD0F8}
@@ -70,7 +71,7 @@
   .chooser-card .name{font-size:80px;letter-spacing:-0.02em;line-height:.95;text-align:center}
   .chooser-card.dubai .name{font-family:'Cormorant Garamond',serif;font-weight:400;font-style:italic}
   .chooser-card.ooh .name{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;text-transform:uppercase;letter-spacing:0;color:var(--ooh-pink)}
-  .chooser-card .arrow{font-family:'Inter',sans-serif;font-size:24px;display:flex;align-items:center;gap:12px;font-weight:500}
+  .chooser-card .arrow{font-family:'Inter',sans-serif;font-size:16px;display:flex;align-items:center;justify-content:center;gap:10px;font-weight:500;flex-wrap:wrap;text-align:center;max-width:260px}
   .chooser-card:hover .arrow svg{transform:translateX(6px)}
   .chooser-card .arrow svg{transition:transform .3s ease}
   .ornament{position:absolute;pointer-events:none;opacity:.65}
@@ -170,17 +171,6 @@
   .pot-card .visual img{width:90%;filter:drop-shadow(0 24px 24px rgba(0,0,0,.25))}
   .pot-card .corner-sticker{position:absolute;top:24px;right:24px;background:var(--ooh-yellow);color:var(--ooh-ink);border:3px solid var(--ooh-ink);width:90px;height:90px;border-radius:50%;display:grid;place-items:center;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;font-size:14px;text-align:center;line-height:.95;text-transform:uppercase;transform:rotate(-10deg)}
 
-  .footer{background:#2A2418;color:#f6f6f6;padding:80px 40px 40px;font-family:'Inter',sans-serif;position:relative;border-top:3px solid #2A2418}
-  .footer-inner{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px}
-  .footer .logo{color:#fff}
-  .footer h5{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#999;margin-bottom:18px}
-  .footer ul{list-style:none;display:flex;flex-direction:column;gap:10px;font-size:14px}
-  .footer ul a:hover{color:var(--terracotta)}
-  .footer .blurb{font-size:14px;line-height:1.6;color:#bbb;max-width:340px;margin-top:18px}
-  .footer-socials{margin-top:24px;display:flex;gap:8px;flex-wrap:wrap}
-  .footer-socials a{padding:8px 16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:100px;font-size:12px;letter-spacing:.05em;color:#ddd;text-decoration:none;transition:background .15s,border-color .15s}
-  .footer-socials a:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);color:#fff}
-  .footer-bottom{margin-top:60px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;font-size:12px;color:#888}
 
   /* ===== HAMBURGER ===== */
   .nav-hamburger{
@@ -282,182 +272,40 @@
     for <span class="accent">everyone</span>.
   </h1>
   <p class="hero-sub">
-    Two worlds, one obsession. From the finest Middle Eastern pastry to the fun pop flavours of your summer afternoons. Pick your adventure.
+    Discover our products and find the one for you.
   </p>
 
   <div class="chooser">
-    <a class="chooser-card dubai" href="dubai-chocolate.html">
+    <a class="chooser-card dubai" href="dubai-chocolate">
       <div class="name">Dubai<br/>Chocolate</div>
       <div class="arrow">
-        The real deal
+        Chocolate, pistachio and kataifi pastry in one bite
         <svg width="22" height="10" viewBox="0 0 22 10" fill="none" stroke="currentColor"><path d="M0 5h20M16 1l4 4-4 4" stroke-width="1.2"/></svg>
       </div>
     </a>
     <div class="divider"></div>
-    <a class="chooser-card ooh" href="ooh.html">
+    <a class="chooser-card ooh" href="ooh">
       <div class="name">OOH!</div>
       <div class="arrow">
-        Fruit that goes OOH!
+        Our frozen fruit in super trend
         <svg width="22" height="10" viewBox="0 0 22 10" fill="none" stroke="currentColor"><path d="M0 5h20M16 1l4 4-4 4" stroke-width="1.2"/></svg>
       </div>
     </a>
   </div>
 </section>
 
-<section class="dubai" id="dubai">
-  <div class="dubai-wrap">
 
-    <h1 class="dubai-headline">
-      The <em>viral</em> Dubai Chocolate<br />
-      in a different <span class="pist">format</span>,<br />
-      with pistachio<br />
-      and <em>crispy kataifi</em>.
-    </h1>
-
-    <div class="dubai-grid">
-      <div class="dubai-product">
-        <div class="badge">Premium<br/>Quality</div>
-        <img src="../assets/dubai-chocolate.png" alt="Dubai Chocolate Dessert — jar" />
-      </div>
-      <div class="dubai-copy">
-        <div class="dubai-tag">&nbsp;</div>
-        <h2 style="margin-top:18px">Pistachio and <em>kataifi</em>, under a thin veil of chocolate.</h2>
-        <p>Pistachio and kataifi pastry, wrapped in a delicate layer of rice crust and chocolate. A dessert built to be kept at −18° and savoured slowly, the way you do with things that are actually good.</p>
-      </div>
-    </div>
-
-    <div class="formats">
-      <a class="format-card barattolo" href="dubai-chocolate.html" style="text-decoration:none;color:inherit;display:block">
-        <div class="pill">6 × 20 g | 120 g</div>
-        <div class="kind">Format — jar</div>
-        <h3>For when you really feel like treating <em>yourself</em>.</h3>
-        <p>The format to share, or to keep all to yourself. 7 pieces of pure pleasure.</p>
-        <div class="visual">
-          <img src="../assets/dubai-chocolate.png" alt="Dubai Chocolate jar" />
-        </div>
-      </a>
-      <a class="format-card flowpack" href="dubai-chocolate.html" style="text-decoration:none;color:inherit;display:block">
-        <div class="pill">1 × 40 g</div>
-        <div class="kind">Format — mini flowpack</div>
-        <h3>For the<br/><em>quick</em> moments.</h3>
-        <p>A single-serve portion to enjoy wherever you are.</p>
-        <div class="visual">
-          <img src="../assets/dubai-flowpack.png" alt="Dubai Chocolate Dessert — mini flowpack" />
-        </div>
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<div class="transition">
-  <div class="stamp">And now, a total mood shift</div>
-</div>
-
-<div class="marquee">
-  <div class="marquee-track">
-    <span>OOH! what a flavour<span class="dot"></span>FRESH FROZEN POPS<span class="dot"></span>FRUIT · CHOCOLATE · STICKS<span class="dot"></span>OOH! what a flavour<span class="dot"></span>FRESH FROZEN POPS<span class="dot"></span>FRUIT · CHOCOLATE · STICKS<span class="dot"></span></span>
-    <span aria-hidden="true">OOH! what a flavour<span class="dot"></span>FRESH FROZEN POPS<span class="dot"></span>FRUIT · CHOCOLATE · STICKS<span class="dot"></span>OOH! what a flavour<span class="dot"></span>FRESH FROZEN POPS<span class="dot"></span>FRUIT · CHOCOLATE · STICKS<span class="dot"></span></span>
-  </div>
-</div>
-
-<section class="ooh" id="ooh">
-  <div class="ooh-hero">
-    <div>
-      <h2>
-        <span class="ooh-mark">OOH!</span><br />
-        <span class="outlined">FROZEN</span><br />
-        <span>FUN FOR<br/>everyone<span class="pink">.</span></span>
-      </h2>
-      <p>Fruit sticks and colourful jars for zero boredom. For the afternoon at the beach, the lunch break, the after-dinner with friends.</p>
-      <div class="cta-row">
-        <a class="btn-ooh" href="ooh.html">All flavours →</a>
-      </div>
-    </div>
-    <div class="ooh-hero-visual">
-      <div class="blob"></div>
-      <div class="blob b2"></div>
-      <div class="sticker s1">Tastes like<br/>real fruit!</div>
-      <img class="product" src="../assets/ooh-peach.png" alt="OOH Peach Stick" />
-      <div class="sticker s2">Vegan<br/>recipe</div>
-    </div>
-  </div>
-
-  <section class="sticks">
-    <div class="sticks-head">
-      <h3>Mini sticks.<br/><span class="y">Maxi flavour.</span></h3>
-      <p class="lede">A transparent capsule that shows exactly what you're about to eat — a delicious vegan sorbet. No surprises, just OOH!</p>
-    </div>
-    <div class="sticks-grid">
-      <article class="stick-card">
-        <div class="img-wrap"><img src="../assets/ooh-strawberry.png" alt="" /></div>
-        <h4>Strawberry<br/>stick</h4>
-      </article>
-      <article class="stick-card">
-        <div class="img-wrap"><img src="../assets/ooh-lemon.png" alt="" /></div>
-        <h4>Lemon<br/>stick</h4>
-      </article>
-      <article class="stick-card">
-        <div class="img-wrap"><img src="../assets/ooh-peach.png" alt="" /></div>
-        <h4>Peach<br/>stick</h4>
-      </article>
-      <article class="stick-card">
-        <div class="img-wrap"><img src="../assets/ooh-mango.png" alt="" /></div>
-        <h4>Mango<br/>stick</h4>
-      </article>
-    </div>
-  </section>
-
-  <section class="pots">
-    <div class="pots-wrap">
-      <div class="pots-head">
-        <h3>The jars that'll make you <span class="pink">go "OOH!"</span><br/>for real.</h3>
-        <p class="lede">Whole fruit coated in white and milk chocolate. The best thing you can keep in your freezer, if you ask us.</p>
-      </div>
-
-      <div class="pots-grid">
-        <a class="pot-card fragole" href="ooh.html">
-          <div class="corner-sticker">New<br/>flavor</div>
-          <div>
-            <h4>OOH!<br/>Strawberries</h4>
-            <p class="desc">Whole baby strawberries coated in white and milk chocolate. 12 pieces per jar.</p>
-            <div class="tags">
-              <span class="tag">White &amp; milk choc</span>
-              <span class="tag">150g</span>
-              <span class="tag">80g</span>
-            </div>
-          </div>
-          <div class="visual"><img src="../assets/ooh-fragole.png" alt="OOH! Strawberries" /></div>
-        </a>
-        <a class="pot-card lamponi" href="ooh.html" style="background-color:rgb(204,85,231)">
-          <div class="corner-sticker">Best<br/>seller</div>
-          <div>
-            <h4>OOH!<br/>Raspberries</h4>
-            <p class="desc">Whole raspberries, frozen and dipped in chocolate. Tart meets sweet in two stages: crunch, then ahhh.</p>
-            <div class="tags">
-              <span class="tag">White &amp; milk choc</span>
-              <span class="tag">150g</span>
-              <span class="tag">80g</span>
-            </div>
-          </div>
-          <div class="visual"><img src="../assets/ooh-lamponi.png" alt="OOH! Raspberries" /></div>
-        </a>
-      </div>
-    </div>
-  </section>
-</section>
-
-<section class="b2b-cta" style="background:#EDE6CF;color:var(--ink);position:relative;overflow:hidden">
+<section class="b2b-cta" style="background:#EDE6CF;color:var(--ink);position:relative;overflow:hidden;margin:0">
   <div style="max-width:1200px;margin:0 auto;position:relative;z-index:2">
 
     <div style="font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:28px">Become a partner</div>
 
-    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(48px,7vw,96px);line-height:.98;letter-spacing:-0.02em;max-width:1000px">
-      Want <em style="font-style:italic;color:var(--terracotta);font-weight:400">Desserty</em> products<br/>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(48px,7vw,96px);line-height:1.15;letter-spacing:-0.02em;max-width:1000px">
+      Want <em style="font-style:italic;color:var(--terracotta);font-weight:400">Desserty</em><br/>
       on your shelves?
     </h2>
 
-    <div class="b2b-grid" style="max-width:1100px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:72px;max-width:1100px">
       <div style="background:#fff;border-radius:12px;padding:40px;border:1px solid rgba(42,36,24,.1)">
         <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:32px;color:var(--ink);margin-bottom:16px">Are you a supermarket?</div>
         <p style="font-family:'Inter',sans-serif;font-weight:300;font-size:16px;line-height:1.65;color:var(--ink-soft)">Add Dubai Chocolate, OOH! sticks and OOH! jars to your frozen aisle. Clear margins, fast turnover, display materials included.</p>
@@ -468,11 +316,11 @@
       </div>
     </div>
 
-    <div style="margin-top:56px;display:flex;gap:18px;flex-wrap:wrap;align-items:center;justify-content:center">
-      <a href="diventa-partner.html" style="display:inline-flex;align-items:center;gap:12px;background:var(--terracotta);color:#fff;font-family:'Inter',sans-serif;font-weight:500;font-size:15px;letter-spacing:.04em;padding:18px 30px;border-radius:100px;text-decoration:none">
+    <div style="margin-top:56px;display:flex;gap:18px;flex-wrap:wrap;align-items:center">
+      <a href="../diventa-partner.html" style="display:inline-flex;align-items:center;gap:12px;background:var(--terracotta);color:#fff;font-family:'Inter',sans-serif;font-weight:500;font-size:15px;letter-spacing:.04em;padding:18px 30px;border-radius:100px;text-decoration:none">
         Become a partner →
       </a>
-      <a href="diventa-partner.html" style="display:inline-flex;align-items:center;gap:12px;color:var(--ink-soft);font-family:'Inter',sans-serif;font-weight:400;font-size:15px;text-decoration:none;border-bottom:1px solid rgba(42,36,24,.3);padding-bottom:2px">
+      <a href="../diventa-partner.html" style="display:inline-flex;align-items:center;gap:12px;color:var(--ink-soft);font-family:'Inter',sans-serif;font-weight:400;font-size:15px;text-decoration:none;border-bottom:1px solid rgba(42,36,24,.3);padding-bottom:2px">
         Write to info@dessertyfood.com
       </a>
     </div>

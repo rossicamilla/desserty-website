@@ -16,6 +16,14 @@ The design medium is **HTML/CSS/JS** — these are prototypes, not production co
 
 **Don't render these files in a browser or take screenshots unless the user asks you to.** Everything you need — dimensions, colors, layout rules — is spelled out in the source. Read the HTML and CSS directly; a screenshot won't tell you anything they don't.
 
+## Working notes (Claude Code)
+
+- **Usa operazioni batch invece di edit singole.** Quando devi modificare più file o fare sostituzioni ripetute, usa PowerShell (`Get-Content` / `-replace` / `Set-Content`) o Bash invece di chiamare il tool Edit una volta per file. Risparmia token in modo significativo.
+- Il sito è statico HTML/CSS/JS, IT in `/prototype/`, EN in `/prototype/en/`. Le due versioni sono speculari.
+- Nav e footer sono iniettati via `shared.js` (IT) e `en/shared.js` (EN) — modificare lì, non nei singoli HTML.
+- API key Resend in `config.php` (gitignored). Template pubblico: `config.example.php`.
+- URL senza `.html` gestiti da `.htaccess` con mod_rewrite.
+
 ## Bundle contents
 
 - `desserty-mod/README.md` — this file
