@@ -103,6 +103,7 @@
     background:var(--ooh-pink);color:#fff;
     border-top:3px solid var(--ooh-ink);border-bottom:3px solid var(--ooh-ink);
     padding:100px 40px;
+    margin-top:100px;
   }
   .spotlight .inner{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
   .spotlight h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-style:italic;font-size:clamp(56px,8vw,120px);line-height:.85;text-transform:uppercase}
@@ -175,24 +176,36 @@
     .ooh-hero{padding:40px 20px 32px}
     .ooh-hero h1{font-size:clamp(56px,16vw,200px)}
     .filters{margin:32px 0 24px}
-    .grid{grid-template-columns:1fr;padding:0 20px}
+    .grid{display:grid!important;grid-template-columns:repeat(2,1fr)!important;padding:0 20px 60px;gap:12px;max-width:100%}
     .card{transform:none!important}
     .card:hover{transform:translateY(-4px)!important}
+    .card.compact{padding:14px 12px 18px;border-radius:18px}
+    .card.compact h3{font-size:20px}
+    .card.compact .img-wrap{aspect-ratio:unset;height:120px;margin:4px 0 10px}
+    .card.compact .img-wrap img{max-height:100%;max-width:70%;object-fit:contain;margin:0 auto;filter:none}
     .card .img-wrap{margin:10px 0 6px}
-    .spotlight{padding:60px 20px}
+    .spotlight{padding:60px 20px;margin-top:72px}
     .spotlight .inner{padding:0}
     .spotlight .visual{max-width:260px;margin:0 auto}
-    .pots-section{padding:60px 20px}
-    .pots-grid{gap:20px}
-    .pot-card{padding:24px 20px}
-    .pot-card h4{font-size:44px}
+    .spotlight .visual img{filter:drop-shadow(0 8px 12px rgba(0,0,0,.15))}
+    .spotlight .visual .sticker{width:78px;height:78px;font-size:12px;line-height:1.1}
+    .spotlight .visual .sticker.s1{top:-16px;left:auto;right:-16px}
+    .spotlight .visual .sticker.s2{bottom:-16px;left:-16px;font-size:11px;width:78px;height:78px}
+    .lavender-zone .ooh-hero{padding:32px 20px 8px}
+    .pots-section{padding:12px 20px 48px}
+    .pots-grid{gap:16px}
+    .pot-card{padding:20px;grid-template-columns:1fr 1fr;gap:12px}
+    .pot-card h4{font-size:30px}
+    .pot-card .desc{font-size:13px;margin-top:8px}
+    .pot-card .tags{margin-top:10px;gap:5px}
+    .pot-card .tag{font-size:10px;padding:4px 8px}
+    .pot-card .corner-sticker{width:56px;height:56px;font-size:10px;top:10px;right:10px}
     .how{padding:60px 20px}
     .how-section{padding:60px 20px}
   }
   @media(max-width:480px){
     .chip{font-size:15px;padding:8px 16px}
     .how-step h3{font-size:26px}
-    .pot-card h4{font-size:36px}
   }
 </style>
 </head>

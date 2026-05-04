@@ -44,8 +44,8 @@
 
   const footerHTML = `
   <footer class="footer">
-    <div class="ooh-band" style="margin:-80px -40px 0;padding-left:0;padding-right:0">
-      <div style="max-width:1480px;margin:0 auto;padding:0 40px;box-sizing:border-box;width:100%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px">
+    <div class="ooh-band">
+      <div class="ooh-band-inner">
         <div class="ooh-band-text">
           Visita anche il sito<br/><span style="color:var(--ooh-pink)">dedicato a OOH!</span>
         </div>

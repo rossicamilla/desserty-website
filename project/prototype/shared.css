@@ -22,6 +22,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{background:var(--paper);color:var(--neutral-ink);-webkit-font-smoothing:antialiased;font-family:'Inter',sans-serif}
+body{overflow-x:hidden}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
@@ -147,6 +148,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
   padding:80px 40px 40px;
   font-family:'Inter',sans-serif;
   position:relative;
+  overflow-x:hidden;
 }
 .footer-inner{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px}
 .footer .logo{color:#fff}
@@ -158,6 +160,8 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 .footer-socials a{padding:8px 16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:100px;font-size:12px;letter-spacing:.05em;color:#ddd;text-decoration:none;transition:background .15s,border-color .15s}
 .footer-socials a:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);color:#fff}
 .footer-bottom{margin-top:60px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;font-size:12px;color:#888}
+.footer .ooh-band{margin:-80px -40px 0}
+.ooh-band-inner{max-width:1480px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
 
 /* ===== HAMBURGER ===== */
 .nav-hamburger{
@@ -213,6 +217,7 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 }
 @media(max-width:640px){
   .nav-inner{padding:14px 20px}
+  .nav .logo img{height:38px!important}
   .nav-mobile-menu{padding:8px 20px 24px}
   .footer-inner{grid-template-columns:1fr;gap:32px}
   .footer{padding:48px 20px 32px}
