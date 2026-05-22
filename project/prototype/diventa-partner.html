@@ -232,7 +232,7 @@
         <div class="eyebrow">Stampa &amp; media</div>
         <h3>Cerchiamo giornalisti e creator che vogliano <em>raccontare di noi</em>.</h3>
         <p>Sei un giornalista, food writer, blogger o creator? Vorresti parlare del Dubai Chocolate Dessert o degli OOH!? Scrivici — ti mandiamo campioni, kit stampa e tutto il materiale che ti serve.</p>
-        <a href="diventa-partner.html" class="press-banner-cta">Scrivici →</a>
+        <a href="#formShell" class="press-banner-cta">Scrivici →</a>
       </div>
       <div style="margin-top:14px;background:#fff;border:1px solid var(--neutral-rule);border-radius:12px;padding:24px 28px">
         <div style="font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--neutral-soft);font-weight:600;margin-bottom:10px">Contatto diretto</div>
@@ -379,6 +379,7 @@
             <span>Ho letto e accetto la <a href="privacy.html" style="color:var(--terracotta);text-decoration:underline">privacy policy</a> e acconsento al trattamento dei dati per essere ricontattato.</span>
           </label>
           <span class="err" id="privacyErr" style="font-size:12px;color:#c93b1f;display:none">Devi accettare la privacy policy per continuare.</span>
+          <div class="cf-turnstile" data-sitekey="YOUR_TURNSTILE_SITE_KEY" data-theme="light" style="margin-top:8px"></div>
         </div>
 
         <!-- NAV -->
@@ -412,6 +413,7 @@
 </div>
 
 <div data-mount="footer"></div>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <script src="shared.js"></script>
 <script>
 (function(){
@@ -613,7 +615,8 @@
       email: data.email || '',
       subject: 'Richiesta partnership',
       message: message,
-      lang: 'it'
+      lang: 'it',
+      'cf-turnstile-response': document.querySelector('[name="cf-turnstile-response"]')?.value || ''
     });
     fetch('contact.php', { method: 'POST', body, headers: { 'Content-Type': 'application/x-www-form-urlencoded' } })
       .finally(()=>{

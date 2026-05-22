@@ -23,7 +23,7 @@ $name    = trim(strip_tags($_POST['name']    ?? ''));
 $email   = trim(strip_tags($_POST['email']   ?? ''));
 $subject = trim(strip_tags($_POST['subject'] ?? ''));
 $message = trim(strip_tags($_POST['message'] ?? ''));
-$lang    = trim(strip_tags($_POST['lang']    ?? 'it'));
+$lang    = in_array(trim($_POST['lang'] ?? ''), ['it','en']) ? trim($_POST['lang']) : 'it';
 
 if (!$name || !$email || !$message) {
     echo json_encode(['success' => false, 'message' => $lang === 'en'
@@ -40,6 +40,37 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 $subjectLabel = $subject ?: ($lang === 'en' ? '(not specified)' : '(non specificato)');
 $dataOra      = date('d/m/Y H:i');
+
+// Safe HTML-encoded versions for use inside email HTML
+$safeName         = htmlspecialchars($name,         ENT_QUOTES, 'UTF-8');
+$safeEmail        = htmlspecialchars($email,        ENT_QUOTES, 'UTF-8');
+$safeSubjectLabel = htmlspecialchars($subjectLabel, ENT_QUOTES, 'UTF-8');
+$safeMessage      = htmlspecialchars($message,      ENT_QUOTES, 'UTF-8');
+
+// Turnstile verification
+if (defined('TURNSTILE_SECRET_KEY') && TURNSTILE_SECRET_KEY !== 'your_turnstile_secret_key_here') {
+    $turnstileToken = trim($_POST['cf-turnstile-response'] ?? '');
+    if (!$turnstileToken) {
+        echo json_encode(['success' => false, 'message' => $lang === 'en'
+            ? 'Security check missing. Please try again.'
+            : 'Verifica di sicurezza mancante. Riprova.']);
+        exit;
+    }
+    $ctx = stream_context_create(['http' => [
+        'method'  => 'POST',
+        'header'  => 'Content-Type: application/x-www-form-urlencoded',
+        'content' => http_build_query(['secret' => TURNSTILE_SECRET_KEY, 'response' => $turnstileToken]),
+        'timeout' => 10,
+    ]]);
+    $res = @file_get_contents('https://challenges.cloudflare.com/turnstile/v0/siteverify', false, $ctx);
+    $ok  = $res ? (json_decode($res, true)['success'] ?? false) : false;
+    if (!$ok) {
+        echo json_encode(['success' => false, 'message' => $lang === 'en'
+            ? 'Security check failed. Please try again.'
+            : 'Verifica di sicurezza fallita. Riprova.']);
+        exit;
+    }
+}
 
 // ─── HELPER RESEND ─────────────────────────────────────────────────────────────
 function sendViaResend(string $to, string $toName, string $subject, string $html, string $text, string $replyTo = ''): bool {
@@ -104,17 +135,17 @@ $htmlInterno = "
       <table width='100%' cellpadding='0' cellspacing='0' style='font-size:14px;line-height:1.5'>
         <tr>
           <td style='padding:11px 0;border-bottom:1px solid #EFEAE0;color:#F97C46;font-size:9px;letter-spacing:0.3em;text-transform:uppercase;font-weight:700;width:90px;vertical-align:top'>NOME</td>
-          <td style='padding:11px 0 11px 16px;border-bottom:1px solid #EFEAE0;color:#2A2418;font-weight:600'>$name</td>
+          <td style='padding:11px 0 11px 16px;border-bottom:1px solid #EFEAE0;color:#2A2418;font-weight:600'>$safeName</td>
         </tr>
         <tr>
           <td style='padding:11px 0;border-bottom:1px solid #EFEAE0;color:#F97C46;font-size:9px;letter-spacing:0.3em;text-transform:uppercase;font-weight:700;vertical-align:top'>EMAIL</td>
           <td style='padding:11px 0 11px 16px;border-bottom:1px solid #EFEAE0'>
-            <a href='mailto:$email' style='color:#2A2418;text-decoration:none;border-bottom:1px solid #F97C46'>$email</a>
+            <a href='mailto:$safeEmail' style='color:#2A2418;text-decoration:none;border-bottom:1px solid #F97C46'>$safeEmail</a>
           </td>
         </tr>
         <tr>
           <td style='padding:11px 0;border-bottom:1px solid #EFEAE0;color:#F97C46;font-size:9px;letter-spacing:0.3em;text-transform:uppercase;font-weight:700;vertical-align:top'>OGGETTO</td>
-          <td style='padding:11px 0 11px 16px;border-bottom:1px solid #EFEAE0;color:#4d4534'>$subjectLabel</td>
+          <td style='padding:11px 0 11px 16px;border-bottom:1px solid #EFEAE0;color:#4d4534'>$safeSubjectLabel</td>
         </tr>
         <tr>
           <td style='padding:11px 0;color:#F97C46;font-size:9px;letter-spacing:0.3em;text-transform:uppercase;font-weight:700;vertical-align:top'>DATA</td>
@@ -125,12 +156,12 @@ $htmlInterno = "
       <!-- MESSAGGIO -->
       <div style='margin-top:28px;border-left:2px solid #F97C46;padding-left:20px'>
         <p style='font-size:9px;letter-spacing:0.3em;text-transform:uppercase;color:#F97C46;font-weight:700;margin:0 0 14px'>MESSAGGIO</p>
-        <p style='font-family:Georgia,serif;font-style:italic;font-size:17px;line-height:1.75;color:#2A2418;margin:0;white-space:pre-wrap'>$message</p>
+        <p style='font-family:Georgia,serif;font-style:italic;font-size:17px;line-height:1.75;color:#2A2418;margin:0;white-space:pre-wrap'>$safeMessage</p>
       </div>
 
       <!-- CTA -->
       <div style='margin-top:32px'>
-        <a href='mailto:$email' style='display:inline-block;background:#2A2418;color:#EDE6CF;padding:13px 28px;border-radius:100px;text-decoration:none;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;font-weight:700'>Rispondi a $name &rarr;</a>
+        <a href='mailto:$safeEmail' style='display:inline-block;background:#2A2418;color:#EDE6CF;padding:13px 28px;border-radius:100px;text-decoration:none;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;font-weight:700'>Rispondi a $safeName &rarr;</a>
       </div>
     </td>
   </tr>
@@ -165,16 +196,16 @@ if (!$ok) {
 
 // ─── EMAIL CONFERMA UTENTE ──────────────────────────────────────────────────────
 if ($lang === 'en') {
-    $greeting   = "We got your message, $name.";
-    $bodyText   = "Thank you for reaching out. We&#39;ve received your message and will get back to you as soon as possible at <strong style='color:#2A2418'>$email</strong>.";
+    $greeting   = "We got your message, $safeName.";
+    $bodyText   = "Thank you for reaching out. We&#39;ve received your message and will get back to you as soon as possible at <strong style='color:#2A2418'>$safeEmail</strong>.";
     $recapLabel = 'YOUR MESSAGE';
     $footerNote = '';
     $footerSub  = '';
     $emailSubject = 'We received your message — Desserty';
     $plainText  = "Hi $name,\n\nWe received your message and will get back to you at $email.\n\nYour message:\n$message\n\n---\nDesserty · info@dessertyfood.com";
 } else {
-    $greeting   = "Messaggio ricevuto, $name.";
-    $bodyText   = "Grazie per averci scritto. Abbiamo ricevuto il tuo messaggio e ti risponderemo al più presto all'indirizzo <strong style='color:#2A2418'>$email</strong>.";
+    $greeting   = "Messaggio ricevuto, $safeName.";
+    $bodyText   = "Grazie per averci scritto. Abbiamo ricevuto il tuo messaggio e ti risponderemo al più presto all'indirizzo <strong style='color:#2A2418'>$safeEmail</strong>.";
     $recapLabel = 'IL TUO MESSAGGIO';
     $footerNote = '';
     $footerSub  = '';
@@ -216,7 +247,7 @@ $htmlConferma = "
         <tr>
           <td style='background:#EDE6CF;border-radius:4px;padding:24px 28px'>
             <p style='font-size:9px;letter-spacing:0.3em;text-transform:uppercase;color:#F97C46;font-weight:700;margin:0 0 14px'>$recapLabel</p>
-            <p style='font-family:Georgia,serif;font-style:italic;font-size:16px;line-height:1.75;color:#2A2418;margin:0;white-space:pre-wrap'>$message</p>
+            <p style='font-family:Georgia,serif;font-style:italic;font-size:16px;line-height:1.75;color:#2A2418;margin:0;white-space:pre-wrap'>$safeMessage</p>
           </td>
         </tr>
       </table>

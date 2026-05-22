@@ -152,6 +152,32 @@
       document.head.appendChild(lnk);
     }
   }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',()=>{mount();fixMarquees();injectFavicon();});
-  else { mount(); fixMarquees(); injectFavicon(); }
+  function initCookieBanner(){
+    if(localStorage.getItem('desserty_cookie_consent')) return;
+    const cookieUrl = location.pathname.includes('/en/') ? '../cookies.html' : 'cookies.html';
+    const banner = document.createElement('div');
+    banner.className = 'cookie-banner';
+    banner.setAttribute('role','dialog');
+    banner.setAttribute('aria-label','Preferenze cookie');
+    banner.innerHTML = `
+      <div class="cookie-banner-inner">
+        <p class="cookie-banner-text">Utilizziamo cookie tecnici e, con il tuo consenso, cookie analitici anonimi per migliorare la navigazione. <a href="${cookieUrl}">Informativa cookie →</a></p>
+        <div class="cookie-banner-actions">
+          <button class="cookie-btn cookie-btn-ghost" id="cookie-reject">Solo necessari</button>
+          <button class="cookie-btn cookie-btn-primary" id="cookie-accept">Accetta tutti</button>
+        </div>
+      </div>`;
+    document.body.appendChild(banner);
+    requestAnimationFrame(()=>requestAnimationFrame(()=>banner.classList.add('visible')));
+    function dismiss(val){
+      localStorage.setItem('desserty_cookie_consent',val);
+      banner.classList.remove('visible');
+      banner.addEventListener('transitionend',()=>banner.remove(),{once:true});
+    }
+    document.getElementById('cookie-accept').addEventListener('click',()=>dismiss('all'));
+    document.getElementById('cookie-reject').addEventListener('click',()=>dismiss('necessary'));
+  }
+
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',()=>{mount();fixMarquees();injectFavicon();initCookieBanner();});
+  else { mount(); fixMarquees(); injectFavicon(); initCookieBanner(); }
 })();
